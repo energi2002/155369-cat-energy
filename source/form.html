@@ -28,11 +28,12 @@
       </nav>
     </header>
     <main class="page-form">
-      <div class="page-form__wrapper">
-        <h1 class="page-form__title">Подбор программы</h1>
-        <p class="page-form__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <form class="page-form__form filter" action="https://echo.htmlacademy.ru" method="get">
-          <fieldset class="filter__introduction">
+      <div class="page-content">
+        <h1 class="page-content__title">Подбор программы</h1>
+        <div class="page-content__wrapper">
+          <p class="page-content__description">Заполните анкету и мы подберем программу питания для вашего кота</p>
+        <form class="page-content__form filter" action="https://echo.htmlacademy.ru" method="get">
+          <fieldset class="filter__section">
             <p>
               <label class="filter__name-label label-common" for="name">Имя:<sup>*</sup></label>
               <input class="filter__name-input input-common" type="text" id="name" name="name" placeholder="Барсик">
@@ -46,7 +47,7 @@
               <input class="filter__age-label input-common" type="text" id="age" name="age" placeholder="7">
             </p>
           </fieldset>
-          <fieldset class="filter__radio">
+          <fieldset class="filter__section">
             <p>
               <input class="filter__slim-input" type="radio" id="slim" name="programms" value="slim" checked>
               <label class="filter__slim-label" for="slim">Похудение</label>
@@ -60,8 +61,8 @@
               <label class="filter__advice-label" for="advice">Не знаю(нужен ваш совет)</label>
             </p>
           </fieldset>
-          <fieldset class="filter__contacts">
-            <legend class="filter__contacts-title">Контактные данные (владельца кота)</legend>
+          <fieldset class="filter__section">
+            <legend class="filter__section-title">Контактные данные (владельца кота)</legend>
             <p>
               <label class="filter__email-label label-common" for="name">E-mail:<sup>*</sup></label>
               <input class="filter__email-input input-common" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
@@ -71,14 +72,14 @@
               <input class="filter__tel-input input-common" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90">
             </p>
           </fieldset>
-          <fieldset class="filter__comments">
-            <legend class="filter__comments-title">Комментарий</legend>
+          <fieldset class="filter__section">
+            <legend class="filter__section-title">Комментарий</legend>
             <p>
               <textarea class="filter__comments-text input-common" id="comments" name="comments" rows="6" placeholder="Расскажите обо всех повадках кота"></textarea>
             </p>
           </fieldset>
-          <fieldset class="filter__checkbox">
-            <legend class="filter__checkbox-title">Дополнительно</legend>
+          <fieldset class="filter__section">
+            <legend class="filter__section-title">Дополнительно</legend>
             <p>
               <input class="filter__sweetener-input" type="checkbox" id="sweetener" name="sweetener" checked>
               <label class="filter__sweetener-label" for="sweetener">Сахарозаменитель</label>
@@ -98,6 +99,8 @@
           </fieldset>
           <button class="filter__btn button">Отправить заявку</button>
         </form>
+        <p class="page-form__note"><sup>*</sup> - Обязательные поля</p>
+      </div>
       </div>
     </main>
     <footer class="page-footer">
