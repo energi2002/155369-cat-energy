@@ -3,31 +3,35 @@
   <head>
     <meta charset="utf-8">
     <title>Кэт энерджи</title>
+    <link rel="stylesheet" href="../source/css/style.css">
   </head>
   <body>
     <header class="page-header">
-      <a class="page-header__logo">
-        <img class="page-header__logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип компании">
-        <img class="page-header__logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list site-list">
-            <li class="site-list__item site-list__item--active">
-              <a>Главная</a>
-            </li>
-            <li class="site-list__item">
-              <a href="catalog.html">Каталог продукции</a>
-            </li>
-            <li class="site-list__item">
-              <a href="form.html">Подбор программы</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <div class="container">
+        <a class="logo">
+          <img class="logo-image" src="http://placehold.it/33x38" width="33" height="38" alt="Логотип компании">
+          <img class="logo-text" src="http://placehold.it/101x18" width="101" height="18" alt="Кэт Энерджи">
+        </a>
+        <nav class="main-nav">
+          <button class="main-nav__toggle" type="button">Открыть меню</button>
+          <div class="main-nav__wrapper">
+            <ul class="main-nav__list site-list">
+              <li class="site-list__item">
+                <a class="site-list__link site-list__link--active">Главная</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="catalog.html">Каталог продукции</a>
+              </li>
+              <li class="site-list__item">
+                <a class="site-list__link" href="form.html">Подбор программы</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </header>
     <main class="page-main">
+      <div class="container">
       <h1 class="visually-hidden">Интернет-магазин функционального питания для котов</h1>
       <section class="catmeal">
         <div class="catmeal__wrapper">
@@ -49,7 +53,7 @@
             <li class="programms-list__item programms-list__item--pro">
               <h3 class="programms-list__title">Набор массы</h3>
               <p class="programms-list__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-              <a class="programms-list__btn programms-list--pro" href="catalog-pro.html">Каталог pro</a>
+              <a class="programms-list__btn programms-list__btn--pro" href="catalog-pro.html">Каталог pro</a>
             </li>
           </ul>
         </div>
@@ -65,11 +69,11 @@
             <li class="advantages-list__item advantages-list__item--month">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</li>
           </ul>
         </div>
-      </section>
-      <section class="example">
+        </section>
+        <section class="example">
         <div class="example__wrapper">
           <h2 class="visually-hidden">Пример до функционального питания и после</h2>
-          <b class="example__title">Как это работает</b>
+          <b class="example__title">Живой пример</b>
           <p class="example__text">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
           <div class="example__data">
             <b class="example__data-number">5 кг</b>
@@ -94,35 +98,40 @@
           </div>
         </div>
       </section>
+      </div>
     </main>
     <footer class="page-footer">
-      <div class="page-footer__wrapper">
-        <div class="page-footer__contacts contacts">
-          <p class="contacts__slogan">Приглашаем к сотрудничеству диллеров</p>
-          <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+      <div class="container">
+        <div class="page-footer__wrapper-top">
+          <div class="page-footer__contacts contacts contacts--white">
+            <p class="contacts__slogan">Приглашаем к сотрудничеству диллеров</p>
+            <p class="contacts__address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+            <p class="contacts__map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.32089461602683!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1516650808995" width="320" height="361" style="border:0" allowfullscreen></iframe>
+            </p>
+          </div>
         </div>
-        <p class="contacts__map">
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.32089461602683!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1516650808995" width="320" height="361" style="border:0" allowfullscreen></iframe>
-        </p>
-        <img class="page-footer__logo" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип компании">
-        <div class="page-footer__social social">
-          <ul class="social__list">
-            <li class="social__item">
-              <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">В Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Инстаграме</a>
-            </li>
-          </ul>
-        </div>
-        <div class="page-footer__copyright copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <img class="copyright__logo" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
-          </a>
+        <div class="page-footer__wrapper-bottom">
+          <img class="logo-footer" src="http://placehold.it/128x24" width="128" height="24" alt="Логотип компании">
+          <div class="page-footer__social social">
+            <ul class="social__list">
+              <li class="social__item">
+                <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy">В Вконтакте</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--instagram" href="https://www.instagram.com/htmlacademy">Инстаграм</a>
+              </li>
+              <li class="social__item">
+                <a class="social__link social__link--facebook" href="https://www.facebook.com/htmlacademy">Мы в Инстаграме</a>
+              </li>
+            </ul>
+          </div>
+          <div class="page-footer__copyright copyright">
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+            <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
+              <img class="copyright__logo" src="http://placehold.it/27x34" width="27" height="34" alt="HTML Academy">
+            </a>
+          </div>
         </div>
       </div>
     </footer>
