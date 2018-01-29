@@ -1,33 +1,127 @@
-.catmeal {
-  background-image:
-    url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(@color-green 305px, @color-white 175px);
-  background-repeat: no-repeat;
-  background-size: 320px 305px;
-  background-position: center top;
+@media (min-width: @mobile) {
+  .catmeal {
+    width: 100%;
+    margin: 0 auto;
 
-  outline: @outline-main;
-}
+    background-image:
+      url("../img/index-background-mobile@1x.jpg"),
+      linear-gradient(@color-green 305px, @color-white 305px);
+    background-repeat: no-repeat;
+    background-size: 320px 305px;
+    background-position: center top;
 
-.catmeal__title {
-  .ident();
+    outline: @outline-main;
+  }
 
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 36px;
-  line-height: 36px;
-  letter-spacing: 0;
-  color: @color-white;
-}
+  .catmeal__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container-mobile();
+  }
+
+  .catmeal__title {
+    .ident-reset();
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0;
+    text-align: center;
+    color: @color-white;
+  }
 
 .catmeal__slogan {
-  .ident();
+  .ident-reset();
 
   font-family: @font-family;
   font-weight: @regular;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0;
+  text-align: center;
   text-transform: uppercase;
   color: @color-white;
+  }
 }
+
+@media (min-width: @tablet) {
+  .catmeal {
+    width: 100%;
+    min-height: 850px;
+    margin: 0 auto;
+
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 709px 609px;
+    background-position: center top;
+
+    outline: @outline-main;
+  }
+
+  .catmeal__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .container-tablet();
+  }
+
+  .catmeal__wrapper {
+    width: 427px;
+
+    outline: @outline-main;
+  }
+
+  .catmeal__pic {
+    display: none;
+  }
+
+  .catmeal__title {
+    .ident-reset();
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 0;
+    text-align: left;
+    color: @color-black;
+  }
+
+.catmeal__slogan {
+  .ident-reset();
+
+  font-family: @font-family;
+  font-weight: @regular;
+  font-size: 20px;
+  line-height: 20px;
+  letter-spacing: 0;
+  text-align: left;
+  text-transform: uppercase;
+  color: @color-black;
+  }
+}
+
+@media (min-width: @desktop) {
+  .catmeal {
+    width: 100%;
+    min-height: 630px;
+    margin: 0 auto;
+
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 552px 499px;
+    background-position: center top;
+
+    outline: @outline-main;
+  }
+
+  .catmeal__container {
+    .container-desktop();
+  }
+}
+
+

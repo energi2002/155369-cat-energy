@@ -1,6 +1,47 @@
-.extra-catalog {
-  .ident();
-  list-style: none;
+@media (min-width: @mobile) {
+  .extra-catalog {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    .ident-reset();
+    list-style: none;
+  }
+}
+
+@media (min-width: @tablet) {
+  .extra-catalog {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 100%;
+
+    .ident-reset();
+    list-style: none;
+  }
+}
+
+@media (min-width: @desktop) {
+  .extra-catalog {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 1220px;
+
+    .ident-reset();
+    list-style: none;
+  }
+
+  .extra-catalog__order-all {
+    width: 245px;
+  }
 }
 
 .extra-catalog__order-all {

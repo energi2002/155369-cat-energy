@@ -1,5 +1,5 @@
 .programms-list {
-  .ident();
+  .ident-reset();
   list-style: none;
 }
 
@@ -7,8 +7,15 @@
   background-color: @color-gray;
 }
 
-.programms-list__title {
-  .ident();
+@media (min-width: @mobile) {
+  .programms-list {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .programms-list__title {
+  .ident-reset();
 
   font-family: @font-family;
   font-weight: @regular;
@@ -17,19 +24,57 @@
   letter-spacing: 0;
   text-transform: uppercase;
   color: @color-black;
-}
+  }
 
 .programms-list__description {
-  .ident();
-  .font-text();
+  .ident-reset();
+  .font-text-mobile();
+  }
+
+  .programms-list__btn {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-black;
+  }
 }
 
-.programms-list__btn {
+@media (min-width: @tablet) {
+ .programms-list__title {
+  .ident-reset();
+
   font-family: @font-family;
   font-weight: @regular;
-  font-size: 16px;
-  line-height: 16px;
+  font-size: 36px;
+  line-height: 37.02px;
   letter-spacing: 0;
   text-transform: uppercase;
   color: @color-black;
+}
+
+.programms-list__description {
+  .ident-reset();
+  .font-text-tablet();
+  }
+
+  .programms-list__btn {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-black;
+  }
+}
+
+@media (min-width: @desktop) {
+  .programms-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 }

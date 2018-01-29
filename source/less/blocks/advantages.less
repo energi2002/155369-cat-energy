@@ -2,6 +2,26 @@
   outline: @outline-main;
 }
 
-.advantages__title {
-  .font-title();
+@media (min-width: @mobile) {
+  .advantages__title {
+    .font-title-mobile();
+  }
+  .advantages {
+    .container-mobile();
+  }
+}
+
+@media (min-width: @tablet) {
+  .advantages__title {
+    .font-title-tablet();
+  }
+  .advantages {
+    .container-tablet();
+  }
+}
+
+@media (min-width: @desktop) {
+  .advantages {
+    .container-desktop();
+  }
 }

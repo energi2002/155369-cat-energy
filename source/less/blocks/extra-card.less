@@ -1,5 +1,29 @@
+@media (min-width: @mobile) {
+  .extra-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: @tablet) {
+  .extra-card {
+    width: 100%;
+    outline: 1px solid red;
+  }
+}
+
+@media (min-width: @desktop) {
+  .extra-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    width: 895px;
+    outline: 1px solid blue;
+  }
+}
+
 .extra-card h3 {
-  .ident();
+  .ident-reset();
 }
 
 .extra-card__title {

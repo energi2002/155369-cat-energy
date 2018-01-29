@@ -1,5 +1,5 @@
 .product-card h2 {
-  .ident();
+  .ident-reset();
 }
 
 .product-card__link {
@@ -8,4 +8,22 @@
 
 .product-card__details {
   .font-text-small();
+}
+
+@media (min-width: @mobile) {
+  .product-card {
+    width: 280px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .product-card {
+    width: 324px;
+  }
+}
+
+@media (min-width: @desktop) {
+  .product-card {
+    width: 245px;
+  }
 }
