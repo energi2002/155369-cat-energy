@@ -1,24 +1,103 @@
-@media (min-width: @desktop) {
+@media (min-width: @mobile) {
+  .extra-goods__title {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: @color-black;
+  }
+}
+
+@media (min-width: @tablet) {
   .extra-goods {
-    .container-desktop();
+    position: relative;
+    margin-bottom: 76px;
   }
 
+  .extra-goods__title {
+    .ident-reset();
+    margin-bottom: 79px;
+    padding-left: 36px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: @color-black;
+  }
+
+  .extra-goods__title::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 18px;
+    height: 3px;
+
+    background-color: @color-green;
+  }
+
+  .extra-goods__title::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    width: 327px;
+    height: 3px;
+
+    background-color: @color-green;
+  }
+}
+
+@media (min-width: @desktop) {
   .extra-goods__wrapper {
     display: flex;
     justify-content: space-around;
     flex-direction: row;
   }
-}
 
-.extra-goods {
-  outline: @outline-main;
-}
+  .extra-goods__title {
+    .ident-reset();
+    margin-bottom: 78px;
+    padding-left: 0;
 
-.extra-goods__title {
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: @color-black;
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: @color-black;
+  }
+
+  .extra-goods__title::before {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 0;
+
+    width: 18px;
+    height: 3px;
+
+    background-color: @color-green;
+  }
+
+  .extra-goods__title::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 0;
+
+    width: 888px;
+    height: 3px;
+
+    background-color: @color-green;
+  }
 }

@@ -9,8 +9,6 @@
     background-repeat: no-repeat;
     background-size: 320px 305px;
     background-position: center top;
-
-    outline: @outline-main;
   }
 
   .catmeal__wrapper {
@@ -23,6 +21,7 @@
 
   .catmeal__title {
     .ident-reset();
+    padding-top: 30px;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -35,6 +34,7 @@
 
   .catmeal__slogan {
     .ident-reset();
+    padding-top: 22px;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -45,20 +45,23 @@
     text-transform: uppercase;
     color: @color-white;
   }
+
+  .catmeal__pic {
+    padding-top: 29px;
+    margin-bottom: 2px;
+  }
 }
 
 @media (min-width: @tablet) {
   .catmeal {
     width: 100%;
-    min-height: 850px;
+    min-height: 855px;
     margin: 0 auto;
 
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
-    background-size: 709px 609px;
-    background-position: center top;
-
-    outline: @outline-main;
+    background-size: 655px 609px;
+    background-position: 115px 250px;
   }
 
   .catmeal__container {
@@ -70,13 +73,15 @@
   }
 
   .catmeal__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
     width: 427px;
-
-    outline: @outline-main;
-  }
-
-  .catmeal__pic {
-    display: none;
+    min-height: 311px;
+    margin-left: 85px;
+    padding-top: 35px;
   }
 
   .catmeal__title {
@@ -103,6 +108,14 @@
     text-transform: uppercase;
     color: @color-black;
   }
+
+  .catmeal__btn {
+    margin-left: 3px;
+  }
+
+  .catmeal__pic {
+    display: none;
+  }
 }
 
 @media (min-width: @desktop) {
@@ -110,16 +123,36 @@
     width: 100%;
     min-height: 630px;
     margin: 0 auto;
+    margin-bottom: 16px;
 
     background-image: url("../img/index-can-mobile@1x.png");
     background-repeat: no-repeat;
     background-size: 552px 499px;
     background-position: center top;
-
-    outline: @outline-main;
   }
 
   .catmeal__container {
     .container-desktop();
+  }
+
+  .catmeal__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 427px;
+    min-height: 329px;
+    margin-left: 79px;
+    padding-top: 76px;
+  }
+
+  .catmeal__slogan {
+    margin-top: -7px;
+  }
+
+  .catmeal__btn {
+    margin-top: 8px;
+    margin-left: 0;
   }
 }

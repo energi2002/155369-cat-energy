@@ -7,5 +7,21 @@
   .ident-reset();
 
   list-style: none;
-  outline: @outline-main;
 }
+
+@media (min-width: @tablet) {
+  .main-catalog {
+    .container-tablet();
+
+    outline: 1px solid green;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-catalog {
+    .container-desktop();
+
+    outline: 1px solid red;
+  }
+}
+
