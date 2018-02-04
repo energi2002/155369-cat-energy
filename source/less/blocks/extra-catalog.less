@@ -5,28 +5,34 @@
     flex-direction: row;
     flex-wrap: wrap;
 
-    width: 100%;
-
     .ident-reset();
+    margin-left: -1px;
+    margin-bottom: 41px;
     list-style: none;
   }
 
   .extra-catalog__order-all {
     min-height: 289px;
+    margin-left: -2px;
 
     background-color: @color-green;
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 280px 289px;
-    background-position: center top;
+    background: url("../img/icon-gift.svg") no-repeat 113px 63px, url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+    background-size: 55px 62px, 280px 289px;
+
   }
 
   .extra-catalog__slogan {
+    display: block;
+    width: 170px;
+    margin: 0 auto;
+    padding-top: 187px;
+
     font-family: "Arial", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    line-height: 16px;
+    line-height: 18px;
     letter-spacing: 0;
+    text-align: center;
     color: @color-white;
   }
 }

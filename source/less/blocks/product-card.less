@@ -1,12 +1,9 @@
-.product-card h2 {
-  .ident-reset();
-}
-
 @media (min-width: @mobile) {
   .product-card {
     width: 100%;
-    min-height: 207px;
-    border-top: 1px solid rgb(237, 237, 237);
+    min-height: 209px;
+
+    background-image: linear-gradient(rgb(237, 237, 237) 1px, @color-white 1px, @color-white 209px, rgb(237, 237, 237) 209px);
   }
 
   .product-card__container {
@@ -18,21 +15,95 @@
     .container-mobile();
   }
 
+  .product-card:last-child .product-card__container {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 82px;
+  }
+
+  .product-card:last-child .product-card__container::before {
+    position: absolute;
+    content: "";
+
+    top: 42px;
+    left: 123px;
+
+    width: 30px;
+    height: 2px;
+
+    background-color: rgb(211, 210, 210);
+  }
+
+  .product-card:last-child .product-card__container::after {
+    position: absolute;
+    content: "";
+
+    top: 29px;
+    left: 137px;
+
+    width: 2px;
+    height: 30px;
+
+    background-color: rgb(211, 210, 210);
+  }
+
+  .product-card__description h2 {
+    width: 75px;
+    .ident-reset();
+    padding-top: 23px;
+    margin-bottom: 10px;
+  }
+
   .product-card__link {
-    .font-text-middle();
+    display: block;
+    margin-left: -1px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-black;
+  }
+
+  .product-card__pic {
+    margin-top: 1px;
+  }
+
+  .product-card__table {
+    width: 144px;
+    margin-left: -3px;
+  }
+
+  .product-card__table tr {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
   }
 
   .product-card__details {
-    .font-text-small();
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0;
+    color: @color-darkgray;
   }
 
   .product-card__text {
     .ident-reset();
+    padding-top: 8px;
+    margin-bottom: 22px;
+
     .font-text-small();
   }
 
   .product-card__btn {
-    margin-top: -4px;
+    margin-top: -2px;
   }
 }
 
@@ -41,7 +112,7 @@
     width: 324px;
     min-height: 541px;
     margin-bottom: 30px;
-    border-top: none;
+    background-image: none;
 
     outline: 1px solid red;
   }

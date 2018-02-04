@@ -1,10 +1,12 @@
-.extra-card h3 {
-  .ident-reset();
-}
-
 @media (min-width: @mobile) {
   .extra-card {
-    width: 100%;
+    min-height: 129px;
+    background-image: linear-gradient(rgb(205, 205, 205) 1px, @color-white 1px, @color-white 129px, rgb(205, 205, 205) 129px);
+  }
+
+  .extra-card h3 {
+    .ident-reset();
+    padding-top: 12px;
   }
 
   .extra-card__title {
@@ -15,6 +17,15 @@
     letter-spacing: 0;
     text-transform: uppercase;
     color: @color-middlegray;
+  }
+
+  .extra-card__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    margin-bottom: 12px;
+    padding-top: 7px;
   }
 
   .extra-card__details {
