@@ -1,7 +1,32 @@
-.advantages {
-  outline: @outline-main;
+@media (min-width: @mobile) {
+  .advantages__title {
+    display: block;
+    margin-bottom: 28px;
+
+    .font-title-mobile();
+  }
+
+  .advantages {
+    .container-mobile();
+    margin-bottom: 45px;
+  }
 }
 
-.advantages__title {
-  .font-title();
+@media (min-width: @tablet) {
+  .advantages__title {
+    display: block;
+    margin-bottom: 68px;
+
+    .font-title-tablet();
+  }
+
+  .advantages {
+    .container-tablet();
+  }
+}
+
+@media (min-width: @desktop) {
+  .advantages {
+    .container-desktop();
+  }
 }

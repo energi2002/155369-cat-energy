@@ -1,33 +1,156 @@
-.catmeal {
-  background-image:
-    url("../img/index-background-mobile@1x.jpg"),
-    linear-gradient(@color-green 305px, @color-white 175px);
-  background-repeat: no-repeat;
-  background-size: 320px 305px;
-  background-position: center top;
+@media (min-width: @mobile) {
+  .catmeal {
+    width: 100%;
+    margin: 0 auto;
 
-  outline: @outline-main;
+    background-image:
+      url("../img/index-background-mobile@1x.jpg"),
+      linear-gradient(@color-green 305px, @color-white 305px);
+    background-repeat: no-repeat;
+    background-size: 320px 305px;
+    background-position: center top;
+  }
+
+  .catmeal__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container-mobile();
+  }
+
+  .catmeal__title {
+    .ident-reset();
+    padding-top: 30px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0;
+    text-align: center;
+    color: @color-white;
+  }
+
+  .catmeal__slogan {
+    .ident-reset();
+    padding-top: 22px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0;
+    text-align: center;
+    text-transform: uppercase;
+    color: @color-white;
+  }
+
+  .catmeal__pic {
+    padding-top: 29px;
+    margin-bottom: 2px;
+  }
 }
 
-.catmeal__title {
-  .ident();
+@media (min-width: @tablet) {
+  .catmeal {
+    width: 100%;
+    min-height: 855px;
+    margin: 0 auto;
 
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 36px;
-  line-height: 36px;
-  letter-spacing: 0;
-  color: @color-white;
+    background-image: url("../img/index-can-mobile@1x.png");
+    background-repeat: no-repeat;
+    background-size: 655px 609px;
+    background-position: 115px 250px;
+  }
+
+  .catmeal__container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .container-tablet();
+  }
+
+  .catmeal__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 427px;
+    min-height: 311px;
+    margin-left: 85px;
+    padding-top: 35px;
+  }
+
+  .catmeal__title {
+    .ident-reset();
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 60px;
+    line-height: 60px;
+    letter-spacing: 0;
+    text-align: left;
+    color: @color-black;
+  }
+
+  .catmeal__slogan {
+    .ident-reset();
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-align: left;
+    text-transform: uppercase;
+    color: @color-black;
+  }
+
+  .catmeal__btn {
+    margin-left: 3px;
+  }
+
+  .catmeal__pic {
+    display: none;
+  }
 }
 
-.catmeal__slogan {
-  .ident();
+@media (min-width: @desktop) {
+  .catmeal {
+    width: 100%;
+    min-height: 749px;
+    margin: 0 auto;
+    margin-bottom: 23px;
 
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 14px;
-  line-height: 14px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: @color-white;
+    background: url("../img/index-can-mobile@1x.png") no-repeat center top,
+      url("../img/index-background-mobile@1x.jpg") no-repeat right top;
+  }
+
+  .catmeal__container {
+    .container-desktop();
+  }
+
+  .catmeal__wrapper {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 427px;
+    min-height: 329px;
+    margin-left: 79px;
+    padding-top: 202px;
+  }
+
+  .catmeal__slogan {
+    margin-top: -7px;
+  }
+
+  .catmeal__btn {
+    margin-top: 8px;
+    margin-left: 0;
+  }
 }

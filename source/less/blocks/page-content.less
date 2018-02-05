@@ -1,24 +1,97 @@
-.page-content__title {
-  .ident();
-  .font-title();
+@media (min-width: @mobile) {
+  .page-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-content__title {
+    .ident-reset();
+    padding-top: 18px;
+    margin-bottom: 25px;
+
+    .font-title-mobile();
+  }
+
+  .page-content__description {
+    .ident-reset();
+    margin-bottom: 40px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-black;
+  }
+
+  .page-content__container {
+    .container-mobile();
+  }
 }
 
-.page-content__description {
-  .ident();
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: @color-black;
+@media (min-width: @tablet) {
+  .page-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-content__container {
+    .container-tablet();
+  }
+
+  .page-content__title {
+    .ident-reset();
+    margin-bottom: 50px;
+
+    .font-title-tablet();
+  }
+
+  .page-content__description {
+    .ident-reset();
+    margin-bottom: 66px;
+    padding-left: 39px;
+    padding-top: 2px;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-black;
+  }
+
+  .page-content__note {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: @color-darkgray;
+  }
 }
 
-.page-content__note {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0;
-  color: @color-darkgray;
+@media (min-width: @desktop) {
+  .page-content {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .page-content__container {
+    .container-desktop();
+  }
+
+  .page-content__title {
+    .ident-reset();
+    margin-bottom: 50px;
+
+    .font-title-tablet();
+  }
+
+  .page-content__description {
+    .ident-reset();
+    margin-bottom: 64px;
+    padding-top: 3px;
+  }
 }

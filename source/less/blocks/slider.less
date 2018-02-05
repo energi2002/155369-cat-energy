@@ -1,9 +1,22 @@
 .slider__list {
-  .ident();
+  .ident-reset();
   list-style: none;
 }
 
-.slider__toggle {
-  .button-reset();
-  .font-text-middle;
+@media (min-width: @mobile) {
+  .slider__toggle {
+    .button-reset();
+    .font-text-middle;
+  }
+
+  .slider__list {
+    margin-bottom: 33px;
+  }
+}
+
+@media (min-width: @tablet) {
+  .slider__toggle {
+    .button-reset();
+    .font-text-middle-tablet;
+  }
 }

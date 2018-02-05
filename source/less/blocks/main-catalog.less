@@ -1,6 +1,28 @@
-.main-catalog {
-  .ident();
+@media (min-width: @mobile) {
+  .main-catalog {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  list-style: none;
-  outline: @outline-main;
+    .ident-reset();
+    margin-bottom: 32px;
+    list-style: none;
+  }
+}
+
+@media (min-width: @tablet) {
+  .main-catalog {
+    .container-tablet();
+
+    outline: 1px solid green;
+  }
+}
+
+@media (min-width: @desktop) {
+  .main-catalog {
+    .container-desktop();
+
+    outline: 1px solid red;
+  }
 }

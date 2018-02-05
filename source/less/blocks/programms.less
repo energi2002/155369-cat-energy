@@ -1,3 +1,17 @@
-.programms {
-  outline: @outline-main;
+@media (min-width: @mobile) {
+  .programms {
+    .container-mobile();
+  }
+}
+
+@media (min-width: @tablet) {
+  .programms {
+    .container-tablet();
+  }
+}
+
+@media (min-width: @desktop) {
+  .programms {
+    .container-desktop();
+  }
 }

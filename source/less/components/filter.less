@@ -1,18 +1,463 @@
-.filter__section-title {
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: 0;
-  color: @color-black;
+fieldset {
+  .ident-reset();
+  border: none;
 }
 
-.filter__label {
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 16px;
-  line-height: 18px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: @color-middlegray;
+@media (min-width: @mobile) {
+  .filter {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 31px;
+  }
+
+  .filter__section-wrapper {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .filter__input {
+    padding: 13px;
+    border: 1px solid rgb(230, 230, 230);
+  }
+
+  .filter__section-pers {
+    .container-mobile();
+    margin-bottom: 6px;
+  }
+
+  .filter__section-pers div,
+  .filter__section-contact div {
+    margin-bottom: 15px;
+  }
+
+  .filter__section-radio {
+    width: 100%;
+    margin-bottom: 8px;
+    border-top: 1px solid @color-lightgray;
+    border-bottom: 1px solid @color-lightgray;
+  }
+
+  .filter__section-radio div {
+    margin-bottom: 30px;
+  }
+
+  .filter__section-radio div:first-of-type {
+    padding-top: 15px;
+  }
+
+  .filter__section-contact {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  .filter__section--green-line::after {
+    content: "";
+
+    position: absolute;
+    top: 12px;
+    right: 0;
+    left: 0;
+
+    height: 3px;
+
+    background-color: @color-green;
+  }
+
+  .filter__section-contact .filter__title {
+    position: relative;
+    display: inline-block;
+    max-width: 188px;
+
+    padding-left: 40px;
+    padding-right: 13px;
+    margin: 0 0 32px -40px;
+
+    background-color: @color-white;
+    z-index: 1;
+  }
+
+  .filter__section-comment .filter__title,
+  .filter__section-extra .filter__title {
+    position: relative;
+    display: inline-block;
+    max-width: 188px;
+
+    padding-left: 40px;
+    padding-right: 21px;
+    margin: 0 0 32px -40px;
+
+    background-color: @color-white;
+    z-index: 1;
+  }
+
+  .filter__section-comment {
+    position: relative;
+    width: 100%;
+    margin-bottom: 27px;
+  }
+
+  .filter__section-comment textarea {
+    resize: none;
+  }
+
+  .filter__section-extra {
+    position: relative;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .filter__section-extra div {
+    margin-bottom: 23px;
+  }
+
+  .filter__title {
+    .ident-reset();
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0;
+    color: @color-black;
+  }
+
+  .filter__section-btn {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .container-mobile();
+  }
+
+  .filter__section-btn .filter__btn {
+    margin-bottom: 19px;
+  }
+
+  .filter__note {
+    margin-right: -2px;
+
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: @color-darkgray;
+  }
+
+  .filter__label {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-middlegray;
+
+    &--pers {
+      margin-right: 13px;
+    }
+
+    &--radio {
+      margin-left: 12px;
+    }
+
+    &--contact {
+      margin-right: 8px;
+    }
+  }
+}
+
+//TABLET
+
+@media (min-width: @tablet) {
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    margin-bottom: 69px;
+  }
+
+  .filter__section-wrapper {
+    width: 100%;
+  }
+
+  .filter__input {
+    padding: 17px;
+    border: 1px solid rgb(230, 230, 230);
+  }
+
+  .filter__section-pers {
+    .container-tablet();
+    margin-bottom: 51px;
+    padding-top: 3px;
+    padding-left: 70px;
+  }
+
+  .filter__section-pers div,
+  .filter__section-contact div {
+    margin-bottom: 19px;
+  }
+
+  .filter__section-radio {
+    width: 100%;
+    margin-bottom: 78px;
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-left: 20px;
+
+    border: 1px solid @color-lightgray;
+  }
+
+  .filter__section-radio div {
+    margin-bottom: 30px;
+  }
+
+  .filter__section-radio div:first-of-type {
+    padding-top: 15px;
+  }
+
+  .filter__section-contact {
+    position: relative;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 70px;
+    padding-right: 35px;
+  }
+
+  .filter__section--green-line::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    right: 0;
+    left: 0;
+
+    height: 3px;
+
+    background-color: @color-green;
+  }
+
+  .filter__section-contact .filter__title,
+  .filter__section-comment .filter__title,
+  .filter__section-extra .filter__title {
+    position: relative;
+    display: inline-block;
+    max-width: 512px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 0 73px -40px;
+
+    background-color: @color-white;
+    z-index: 1;
+  }
+
+  .filter__section-comment {
+    position: relative;
+    width: 100%;
+    margin-bottom: 67px;
+    padding-left: 70px;
+    padding-right: 35px;
+  }
+
+  .filter__section-comment textarea {
+    width: 595px;
+    min-height: 137px;
+    resize: none;
+  }
+
+  .filter__section-extra {
+    position: relative;
+    width: 100%;
+    margin-bottom: 25px;
+    padding-left: 70px;
+    padding-right: 35px;
+  }
+
+  .filter__section-extra .filter__title {
+    margin-bottom: 64px;
+  }
+
+  .filter__title {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 36px;
+    line-height: 36px;
+    letter-spacing: 0;
+    color: @color-black;
+  }
+
+  .filter__section-wrap-tablet {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter__section-wrap-tablet div {
+    width: 324px;
+    margin-bottom: 31px;
+  }
+
+  .filter__section-btn {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+
+    .container-tablet();
+  }
+
+  .filter__section-btn .filter__btn {
+    margin-left: 42px;
+    margin-right: 60px;
+    margin-bottom: 19px;
+  }
+
+  .filter__note {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: @color-darkgray;
+  }
+
+  .filter__label {
+    .font-text-middle-tablet();
+    color: @color-middlegray;
+  }
+}
+
+//DESKTOP
+
+@media (min-width: @desktop) {
+  .filter {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter__section-wrapper:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    .container-desktop();
+  }
+
+  .filter__section-pers {
+    width: 570px;
+    .container-desktop();
+    margin-bottom: 51px;
+    padding-top: 3px;
+    padding-left: 0;
+  }
+
+  .filter__section-pers div,
+  .filter__section-contact div {
+    margin-bottom: 19px;
+  }
+
+  .filter__section-radio {
+    width: 570px;
+    margin-bottom: 72px;
+    margin-left: 70px;
+    padding-top: 5px;
+    padding-left: 20px;
+
+    border: 1px solid @color-lightgray;
+  }
+
+  .filter__section-radio div {
+    margin-bottom: 30px;
+  }
+
+  .filter__section-radio div:first-of-type {
+    padding-top: 15px;
+  }
+
+  .filter__section-radio .page-content__container {
+    width: 570px;
+  }
+
+  .filter__section-contact {
+    position: relative;
+    width: 100%;
+    margin-bottom: 29px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .filter__section-contact .filter__title {
+    margin-bottom: 76px;
+  }
+
+  .filter__section-wrap-desk {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .filter__section-wrap-desk div {
+    width: 570px;
+  }
+
+  .filter__section-comment {
+    position: relative;
+    width: 100%;
+    margin-bottom: 67px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .filter__section-comment .filter__title {
+    margin-bottom: 74px;
+  }
+
+  .filter__section-comment textarea {
+    width: 1184px;
+    min-height: 137px;
+    resize: none;
+  }
+
+  .filter__section-extra {
+    position: relative;
+    width: 100%;
+    margin-bottom: 15px;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .filter__section-wrap-tablet {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .filter__section-wrap-tablet div {
+    width: 245px;
+    margin-bottom: 31px;
+  }
+
+  .filter__section-btn {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+
+    .container-desktop();
+  }
+
+  .filter__section-btn .filter__btn {
+    margin-left: 0;
+    margin-right: 80px;
+    margin-bottom: 19px;
+  }
 }

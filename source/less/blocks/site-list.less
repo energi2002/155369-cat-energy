@@ -1,15 +1,103 @@
-.site-list {
-  list-style: none;
-  background-color: @color-white;
+@media (min-width: @mobile) {
+  .site-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .ident-reset();
+
+    list-style: none;
+  }
+
+  .site-list__item {
+    width: 100%;
+    padding-top: 23px;
+    padding-bottom: 22px;
+
+    border-bottom: 1px solid rgb(230, 230, 230);
+  }
+
+  .site-list__link {
+    display: block;
+    .container-mobile();
+
+    font-family: @font-family;
+    font-weight: @medium;
+    font-size: 20px;
+    line-height: 20px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    text-align: center;
+    color: @color-black;
+  }
 }
 
-.site-list__link {
-  font-family: @font-family;
-  font-weight: @medium;
-  font-size: 20px;
-  line-height: 20px;
-  letter-spacing: 0;
-  text-transform: uppercase;
+@media (min-width: @tablet) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 
-  color: @color-black;
+    width: 439px;
+  }
+
+  .site-list__item:first-child {
+    width: 64px;
+  }
+
+  .site-list__item {
+    width: 162px;
+    padding-top: 21px;
+    padding-bottom: 22px;
+
+    border-bottom: none;
+  }
+
+  .site-list__link {
+    display: inline;
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 18px;
+    line-height: 24.86px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: @color-middlegray;
+  }
+}
+
+@media (min-width: @desktop) {
+  .site-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    width: 483px;
+  }
+
+  .site-list__item:first-child {
+    width: 72px;
+  }
+
+  .site-list__item {
+    width: 180px;
+    padding-top: 21px;
+    padding-bottom: 22px;
+
+    border-bottom: none;
+  }
+
+  .site-list__link {
+    display: inline;
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 24.86px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+
+    color: @color-black;
+  }
 }

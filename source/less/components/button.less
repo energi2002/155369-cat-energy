@@ -1,28 +1,128 @@
-.button {
-  .button-reset();
+@media (min-width: @mobile) {
+  .button {
+    .button-reset();
 
-  display: block;
-  width: 280px;
-  padding: 12px 0;
+    display: block;
+    width: 280px;
+    padding: 12px 0;
 
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 14px;
-  line-height: 18px;
-  text-transform: uppercase;
-  text-align: center;
-  text-decoration: none;
-  color: @color-white;
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @color-white;
 
-  background-color: @color-green;
+    background-color: @color-green;
 
-  &--order {
-    font-size: 16px;
-    line-height: 20px;
+    &--extra {
+      padding-top: 12px;
+      padding-bottom: 9px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--order {
+      padding: 11px 0;
+      font-size: 16px;
+      line-height: 18px;
+    }
+
+    &--gray {
+      color: rgb(34, 34, 34);
+      background-color: @color-gray;
+    }
   }
+}
 
-  &--gray {
-    color: rgb(34, 34, 34);
-    background-color: @color-gray;
+@media (min-width: @tablet) {
+  .button {
+    .button-reset();
+
+    display: block;
+    width: 245px;
+    padding: 16px 0;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @color-white;
+
+    background-color: @color-green;
+
+    &--extra {
+      width: 607px;
+      padding: 11px 13px 10px;
+
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--gray {
+      color: @color-darkgray;
+      background-color: @color-gray;
+    }
+
+    &--form {
+      width: 283px;
+      padding: 17px;
+
+      font-size: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop) {
+  .button {
+    .button-reset();
+
+    display: block;
+    width: 245px;
+    padding: 16px 0;
+
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 20px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: @color-white;
+
+    background-color: @color-green;
+
+    &--extra {
+      width: 245px;
+      padding-top: 12px;
+      padding-bottom: 8px;
+
+      font-size: 16px;
+      line-height: 20px;
+      text-align: center;
+    }
+
+    &--order {
+      width: 169px;
+      font-size: 16px;
+      line-height: 20px;
+    }
+
+    &--gray {
+      color: @color-darkgray;
+      background-color: @color-gray;
+    }
+
+    &--form {
+      width: 569px;
+      padding: 17px;
+      font-size: 20px;
+
+      line-height: 20px;
+    }
   }
 }

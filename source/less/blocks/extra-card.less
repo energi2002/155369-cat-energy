@@ -1,22 +1,102 @@
-.extra-card h3 {
-  .ident();
+@media (min-width: @mobile) {
+  .extra-card {
+    min-height: 129px;
+    background-image: linear-gradient(rgb(205, 205, 205) 1px, @color-white 1px, @color-white 129px, rgb(205, 205, 205) 129px);
+  }
+
+  .extra-card h3 {
+    .ident-reset();
+    padding-top: 12px;
+  }
+
+  .extra-card__title {
+    font-family: @font-family;
+    font-weight: @regular;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-transform: uppercase;
+    color: @color-middlegray;
+  }
+
+  .extra-card__wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+
+    margin-bottom: 12px;
+    padding-top: 7px;
+  }
+
+  .extra-card__details {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0;
+    color: @color-darkgray;
+  }
 }
 
-.extra-card__title {
-  font-family: @font-family;
-  font-weight: @regular;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0;
-  text-transform: uppercase;
-  color: @color-middlegray;
+@media (min-width: @tablet) {
+  .extra-card {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    padding: 24px 38px 25px;
+
+    border: 1px solid rgb(230, 230, 230);
+  }
+
+  .extra-card__title {
+    .font-text-middle-tablet();
+  }
+
+  .extra-card h3 {
+    width: 283px;
+  }
+
+  .extra-card__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    width: 283px;
+    margin-bottom: 27px;
+  }
+
+  .extra-card__details {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .extra-card__details:last-child {
+    margin-left: 52px;
+  }
 }
 
-.extra-card__details {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  letter-spacing: 0;
-  color: @color-darkgray;
+@media (min-width: @desktop) {
+  .extra-card {
+    display: flex;
+    align-items: baseline;
+    flex-direction: row;
+
+    width: 895px;
+    padding: 16px 0 14px;
+
+    border: 1px solid rgb(230, 230, 230);
+    border-left: 0;
+    border-right: 0;
+  }
+
+  .extra-card__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+
+    width: 283px;
+    margin-bottom: 0;
+  }
 }
