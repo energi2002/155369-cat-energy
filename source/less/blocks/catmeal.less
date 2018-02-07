@@ -77,16 +77,14 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
     width: 427px;
     min-height: 311px;
     margin-left: 85px;
-    padding-top: 35px;
+    padding-top: 33px;
   }
 
   .catmeal__title {
     .ident-reset();
-
     font-family: @font-family;
     font-weight: @regular;
     font-size: 60px;
@@ -121,12 +119,13 @@
 @media (min-width: @desktop) {
   .catmeal {
     width: 100%;
-    min-height: 749px;
+    min-height: 696px;
     margin: 0 auto;
-    margin-bottom: 23px;
+    margin-bottom: 76px;
 
     background: url("../img/index-can-mobile@1x.png") no-repeat center top,
-      url("../img/index-background-mobile@1x.jpg") no-repeat right top;
+      url("../img/index-background-mobile@1x.jpg") no-repeat right top,
+      linear-gradient(to right, @color-white 690px, @color-green 690px);
   }
 
   .catmeal__container {

@@ -3,6 +3,17 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
+
+    padding-top: 10px;
+  }
+
+  .copyright__link {
+    font-family: "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 16px;
+    letter-spacing: 0;
+    color: @color-darkgray;
   }
 
   .copyright__link:first-child {
@@ -14,11 +25,15 @@
   }
 }
 
-.copyright__link {
-  font-family: "Arial", sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 16px;
-  letter-spacing: 0;
-  color: @color-darkgray;
+@media (min-width: @tablet) {
+  .copyright {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 163px;
+    padding-top: 6px;
+  }
 }
+
+
+
