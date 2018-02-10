@@ -54,12 +54,12 @@
     border-bottom: 1px solid @color-lightgray;
   }
 
-  .filter__section-radio div {
-    margin-bottom: 23px;
+  .filter__section-radio .page-content__container {
+    padding-top: 28px;
   }
 
-  .filter__section-radio div:first-of-type {
-    padding-top: 14px;
+  .filter__section-radio div {
+    margin-bottom: 23px;
   }
 
   .filter__section-contact {
@@ -277,21 +277,16 @@
 
 @media (min-width: @tablet) {
   .filter {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-
     margin-bottom: 49px;
-  }
-
-  .filter__section-wrapper {
-    width: 100%;
   }
 
   .filter__input {
     padding: 17px 20px;
     border: 1px solid rgb(230, 230, 230);
+  }
+
+  .filter__section-wrapper {
+
   }
 
   .filter__section-pers {
@@ -309,26 +304,36 @@
     margin-bottom: 19px;
   }
 
-  .filter__section-wrap-desk {
-    width: 633px;
+  .filter__section-radio {
+    display: flex;
+    margin-left: calc(50% - 315px);
   }
 
-  .filter__section-radio {
-    width: 100%;
+  .filter__section-radio .page-content__container {
+    flex-grow: 1;
     margin-bottom: 78px;
-    margin-left: 70px;
-    padding-top: 5px;
-    padding-left: 20px;
-
     border: 1px solid @color-lightgray;
+    border-right: none;
+  }
+
+  .page-content__container-inner {
+    box-sizing: border-box;
+    width: 630px;
+    padding-left: 55px;
+    padding-right: 20px;
+    padding-top: 34px;
+  }
+
+  .filter__section-radio .page-content__container {
+    padding-top: 0;
   }
 
   .filter__section-radio div {
     margin-bottom: 30px;
   }
 
-  .filter__section-radio div:first-of-type {
-    padding-top: 15px;
+  .filter__section-wrap-desk {
+    width: 633px;
   }
 
   .filter__section-contact {

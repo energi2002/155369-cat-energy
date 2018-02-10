@@ -1,20 +1,23 @@
 @media (min-width: @mobile) {
   .social {
-    min-height: 54px;
     border-top: 1px solid @color-lightgray;
     border-bottom: 1px solid @color-lightgray;
   }
 
   .social__list {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-direction: row;
 
-    width: 126px;
-    margin-top: 23px;
-    margin-left: 30px;
-
+    width: 280px;
+    .ident-reset();
+    padding-top: 23px;
     list-style: none;
+  }
+
+  .social__item {
+    padding-left: 16px;
+    padding-right: 17px;
   }
 }
 
@@ -32,8 +35,6 @@
 
     width: 124px;
     margin-top: 23px;
-    margin-left: -20px;
-
     list-style: none;
   }
 
