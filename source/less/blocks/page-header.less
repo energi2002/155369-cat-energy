@@ -25,7 +25,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
+    margin-bottom: 65px;
     padding-top: 22px;
     .container-tablet();
   }
@@ -38,18 +38,19 @@
 @media (min-width: @desktop) {
   .page-header {
     position: relative;
-
     display: flex;
     justify-content: space-between;
     flex-direction: row;
 
     .container-desktop();
-    margin-bottom: 59px;
+    margin-bottom: 70px;
     padding-top: 51px;
   }
 
   .page-header--absolute {
     position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
   }
 
   .page-header__toggle {

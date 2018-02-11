@@ -42,21 +42,26 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
     width: 100%;
 
     .ident-reset();
     list-style: none;
+    margin-bottom: 69px;
   }
 
   .extra-catalog__order-all {
-    min-height: 198px;
-
+    min-height: 200px;
+    background: url("../img/icon-gift.svg") no-repeat 94px 63px, url("../img/gift-photo-mobile@1x.jpg") no-repeat;
+    background-size: 55px 62px, 280px 289px;
     background-color: @color-green;
-    background-image: url("../img/gift-photo-mobile@1x.jpg");
-    background-repeat: no-repeat;
-    background-size: 280px 289px;
-    background-position: center top;
+  }
+
+  .extra-catalog__slogan {
+    display: block;
+    width: 170px;
+    padding-top: 74px;
+    padding-left: 315px;
+    text-align: left;
   }
 }
 
@@ -66,7 +71,6 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
     width: 1220px;
 
     .ident-reset();
@@ -74,7 +78,17 @@
   }
 
   .extra-catalog__order-all {
-    width: 310px;
+    width: 305px;
     min-height: 200px;
+  }
+
+  .extra-catalog__slogan {
+    display: block;
+    width: 161px;
+    padding-top: 187px;
+    padding-left: 0;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
   }
 }

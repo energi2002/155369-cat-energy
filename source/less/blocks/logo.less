@@ -19,38 +19,46 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
     height: 65px;
     .container-mobile();
   }
 
   .logo__footer {
-    padding-top: 5px;
     padding-left: 76px;
-    padding-bottom: 28px;
+    padding-bottom: 30px;
   }
 }
 
 @media (min-width: @tablet) {
-  .logo,
-  .logo__link {
+  .logo {
     width: 192px;
-    height: 66px;
-
     border-bottom: none;
   }
 
-  .logo .page-header__container {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
+  .logo__link {
+    width: 192px;
+    border-bottom: none;
+  }
+
+  .logo__footer {
+    padding-left: 3px;
+    padding-bottom: 28px;
   }
 }
 
 @media (min-width: @desktop) {
-  .logo,
+  .logo {
+    margin-right: 10px;
+  }
+
   .logo__link {
     width: 245px;
-    height: 80px;
+    //height: 80px;
+  }
+
+  .logo__footer {
+    padding-top: 5px;
+    padding-left: 0;
+    padding-bottom: 28px;
   }
 }
