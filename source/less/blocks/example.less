@@ -3,7 +3,6 @@
     width: 100%;
     min-height: 704px;
     margin: 0 auto;
-
     background-color: @color-gray;
   }
 
@@ -13,7 +12,6 @@
 
   .example__title {
     display: block;
-
     padding-top: 18px;
     margin-bottom: 24px;
     .font-title-mobile();
@@ -23,7 +21,6 @@
     .ident-reset();
     padding-right: 14px;
     margin-bottom: 25px;
-
     .font-text-mobile();
   }
 
@@ -32,27 +29,19 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-
     margin-bottom: 60px;
   }
 
   .example__data-wrapper {
-    position: relative;
-
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 124px;
     margin-bottom: 19px;
-
-    border: 1px solid rgb(205, 205, 205);
-    border-radius: 3%;
   }
 
   .example__data-number {
-    padding-top: 15px;
-    padding-bottom: 9px;
+    width: 99px;
+    padding: 15px 12px;
     margin-bottom: 7px;
 
     font-family: @font-family;
@@ -60,17 +49,17 @@
     font-size: 24px;
     line-height: 24px;
     letter-spacing: 0;
+    text-align: center;
     text-transform: uppercase;
     color: @color-black;
+    border: 1px solid rgb(205, 205, 205);
+    border-radius: 3%;
   }
 
   .example__data-text {
-    position: absolute;
-    top: 45px;
-    left: 17px;
-
     display: block;
     width: 87px;
+    margin-top: -16px;
     background-color: @color-gray;
 
     font-family: "Arial", sans-serif;
@@ -83,8 +72,8 @@
   }
 
   .example__summary {
-    padding-top: 14px;
-    padding-left: 47px;
+    display: block;
+    margin: 0 auto;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -102,7 +91,6 @@
     width: 100%;
     min-height: 1083px;
     margin: 0 auto;
-
     background-image: linear-gradient(@color-gray 1px, @color-white 1px, @color-white 621px, @color-gray 621px);
   }
 
@@ -126,19 +114,13 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-    flex-wrap: nowrap;
-    width: 708px;
     padding-top: 21px;
   }
 
   .example__data-wrapper {
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 155px;
-    padding-left: 5px;
     margin-right: 42px;
   }
 
@@ -147,7 +129,8 @@
   }
 
   .example__data-number {
-    padding-bottom: 10px;
+    width: 137px;
+    padding: 16px 12px;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -159,12 +142,9 @@
   }
 
   .example__data-text {
-    position: absolute;
-    top: 62px;
-    left: 15px;
-
     display: block;
     width: 132px;
+    margin-top: -15px;
     background-color: @color-white;
 
     font-family: "Arial", sans-serif;
@@ -176,10 +156,10 @@
   }
 
   .example__summary {
-    width: 173px;
-    padding-left: 0;
-    margin-top: -5px;
-    margin-left: 123px;
+    width: 185px;
+    .ident-reset();
+    margin-top: 6px;
+    margin-left: auto;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -197,7 +177,6 @@
     width: 100%;
     min-height: 620px;
     margin: 0 auto;
-
     background-image: linear-gradient(@color-white 205px, @color-gray 205px);
   }
 
@@ -205,25 +184,24 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
     .container-desktop();
   }
 
   .example__wrapper {
-    width: 645px;
+    width: 50%;
   }
 
   .example__title {
     .ident-reset();
     padding-top: 70px;
     margin-bottom: 144px;
-
     .font-title-tablet();
   }
 
   .example__text {
+    width: 435px;
     margin-bottom: 46px;
-    padding-right: 175px;
+    padding-right: 20px;
     .font-text-tablet();
   }
 
@@ -232,35 +210,27 @@
     justify-content: space-between;
     flex-direction: row;
     flex-wrap: wrap;
-
     width: 365px;
   }
 
   .example__data-wrapper {
-    position: relative;
     display: flex;
     align-items: center;
     flex-direction: column;
-
-    width: 160px;
-    padding-left: 0;
+    margin-bottom: 47px;
     margin-right: 0;
+    padding-left: 0;
   }
 
   .example__data-text {
-    position: absolute;
-    top: 62px;
-    left: 15px;
-
     display: block;
     width: 132px;
     background-color: @color-gray;
   }
 
   .example__summary {
-    width: 325px;
+    width: 365px;
     padding-left: 0;
-    margin-top: 25px;
     margin-left: 0;
 
     font-family: @font-family;

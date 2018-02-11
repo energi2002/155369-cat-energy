@@ -2,6 +2,7 @@
   .catmeal {
     width: 100%;
     margin: 0 auto;
+    margin-bottom: 21px;
 
     background-image:
       url("../img/index-background-mobile@1x.jpg"),
@@ -12,10 +13,6 @@
   }
 
   .catmeal__wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-
     .container-mobile();
   }
 
@@ -34,6 +31,7 @@
 
   .catmeal__slogan {
     .ident-reset();
+    margin-bottom: 29px;
     padding-top: 22px;
 
     font-family: @font-family;
@@ -44,11 +42,6 @@
     text-align: center;
     text-transform: uppercase;
     color: @color-white;
-  }
-
-  .catmeal__pic {
-    padding-top: 29px;
-    margin-bottom: 2px;
   }
 }
 
@@ -65,26 +58,19 @@
   }
 
   .catmeal__container {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-
     .container-tablet();
   }
 
   .catmeal__wrapper {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 427px;
-    min-height: 311px;
-    margin-left: 85px;
-    padding-top: 33px;
+    width: 450px;
+    margin-left: 89px;
+    padding-top: 52px;
   }
 
   .catmeal__title {
     .ident-reset();
+    margin-bottom: 40px;
+
     font-family: @font-family;
     font-weight: @regular;
     font-size: 60px;
@@ -96,6 +82,7 @@
 
   .catmeal__slogan {
     .ident-reset();
+    margin-bottom: 43px;
 
     font-family: @font-family;
     font-weight: @regular;
@@ -125,7 +112,7 @@
 
     background: url("../img/index-can-mobile@1x.png") no-repeat center top,
       url("../img/index-background-mobile@1x.jpg") no-repeat right top,
-      linear-gradient(to right, @color-white 690px, @color-green 690px);
+      linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
   }
 
   .catmeal__container {
@@ -133,23 +120,16 @@
   }
 
   .catmeal__wrapper {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    width: 427px;
-    min-height: 329px;
+    width: 486px;
     margin-left: 79px;
-    padding-top: 202px;
+    padding-top: 223px;
   }
 
   .catmeal__slogan {
-    margin-top: -7px;
+    margin-bottom: 52px;
   }
 
   .catmeal__btn {
-    margin-top: 8px;
     margin-left: 0;
   }
 }

@@ -8,6 +8,12 @@
     margin-bottom: 29px;
   }
 
+  .filter__container,
+  .filter__container-radio {
+    width: 280px;
+    margin: 0 auto;
+  }
+
   .filter__section-wrapper {
     width: 100%;
     overflow: hidden;
@@ -54,11 +60,12 @@
     border-bottom: 1px solid @color-lightgray;
   }
 
-  .filter__section-radio .page-content__container {
+  .page-content__container-inner {
     padding-top: 28px;
+    padding-left: 47px;
   }
 
-  .filter__section-radio div {
+  .page-content__container-inner div {
     margin-bottom: 23px;
   }
 
@@ -142,6 +149,10 @@
     z-index: 1;
   }
 
+  .filter__section-wrap-tablet {
+    padding-left: 47px;
+  }
+
   .filter__section-btn {
     display: flex;
     align-items: center;
@@ -176,18 +187,13 @@
       margin-right: 14px;
     }
 
-    &--radio {
-      padding-left: 47px;
+    &--radio,
+    &--checkbox {
       cursor: pointer;
     }
 
     &--contact {
       margin-right: 8px;
-    }
-
-    &--checkbox {
-      padding-left: 47px;
-      cursor: pointer;
     }
   }
 
@@ -204,7 +210,7 @@
     position: absolute;
     content: "";
     top: -5px;
-    left: 0;
+    left: -47px;
     width: 29px;
     height: 29px;
     border-radius: 50%;
@@ -219,7 +225,7 @@
     position: absolute;
     content: "";
     top: 4px;
-    left: 9px;
+    left: -38px;
     width: 12px;
     height: 12px;
     background-color: @color-green;
@@ -234,7 +240,7 @@
     position: absolute;
     content: "";
     top: -5px;
-    left: 0;
+    left: -47px;
     width: 29px;
     height: 29px;
     border: 1px solid rgb(228, 228, 228);
@@ -247,8 +253,8 @@
   .filter__section-extra input[type="checkbox"]:checked + label::after {
     position: absolute;
     content: "";
-    top: 0;
-    left: 5px;
+    top: 2px;
+    left: -41px;
     width: 21px;
     height: 16px;
     background-image: url("../img/icon-tick.svg");
@@ -280,17 +286,20 @@
     margin-bottom: 49px;
   }
 
+  .filter__container {
+    width: 636px;
+    padding-left: 6px;
+    margin: 0 auto;
+  }
+
   .filter__input {
     padding: 17px 20px;
     border: 1px solid rgb(230, 230, 230);
   }
 
-  .filter__section-wrapper {
-
-  }
-
   .filter__section-pers {
-    width: 630px;
+    box-sizing: border-box;
+    width: 636px;
     margin-bottom: 53px;
     padding-top: 3px;
     padding-left: 6px;
@@ -306,30 +315,32 @@
 
   .filter__section-radio {
     display: flex;
-    margin-left: calc(50% - 315px);
-  }
-
-  .filter__section-radio .page-content__container {
-    flex-grow: 1;
-    margin-bottom: 78px;
+    margin-left: calc(~"50% - 315px");
     border: 1px solid @color-lightgray;
     border-right: none;
+  }
+
+  .filter__container-radio {
+    flex-grow: 1;
+    width: 636px;
+    margin: 0;
+    padding-left: 6px;
   }
 
   .page-content__container-inner {
     box-sizing: border-box;
     width: 630px;
-    padding-left: 55px;
+    padding-left: 80px;
     padding-right: 20px;
     padding-top: 34px;
   }
 
-  .filter__section-radio .page-content__container {
-    padding-top: 0;
+  .page-content__container-inner div {
+    margin-bottom: 30px;
   }
 
-  .filter__section-radio div {
-    margin-bottom: 30px;
+  .filter__section-wrapper {
+    margin-bottom: 48px;
   }
 
   .filter__section-wrap-desk {
@@ -340,8 +351,6 @@
     position: relative;
     width: 100%;
     margin-bottom: 50px;
-    padding-left: 70px;
-    padding-right: 35px;
   }
 
   .filter__input--email {
@@ -386,8 +395,6 @@
     position: relative;
     width: 100%;
     margin-bottom: 67px;
-    padding-left: 70px;
-    padding-right: 35px;
   }
 
   .filter__section-comment textarea {
@@ -400,8 +407,6 @@
     position: relative;
     width: 100%;
     margin-bottom: 0;
-    padding-left: 70px;
-    padding-right: 35px;
   }
 
   .filter__section-extra .filter__title {
@@ -422,6 +427,7 @@
     justify-content: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-left: 0;
   }
 
   .filter__section-extra div {
@@ -429,8 +435,14 @@
   }
 
   .filter__section-wrap-tablet div {
-    width: 342px;
+    width: 318px;
+    padding-left: 60px;
     margin-bottom: 50px;
+    box-sizing: border-box;
+  }
+
+  .filter__section-wrap-tablet div:nth-child(even) {
+    padding-left: 83px;
   }
 
   .filter__section-btn {
@@ -465,19 +477,11 @@
       margin-right: 16px;
     }
 
-    &--radio {
-      padding-left: 39px;
-      cursor: pointer;
-    }
-
     &--contact {
       margin-right: 13px;
     }
 
     &--checkbox {
-      padding-left: 60px;
-      margin-right: 20px;
-      cursor: pointer;
     }
   }
 
@@ -485,7 +489,7 @@
     position: absolute;
     content: "";
     top: -6px;
-    left: -22px;
+    left: -57px;
     width: 39px;
     height: 39px;
     border-radius: 50%;
@@ -500,7 +504,7 @@
     position: absolute;
     content: "";
     top: 5px;
-    left: -11px;
+    left: -45px;
     width: 18px;
     height: 18px;
     background-color: @color-green;
@@ -514,8 +518,8 @@
   .filter__section-extra .filter__label::before {
     position: absolute;
     content: "";
-    top: -5px;
-    left: 0;
+    top: -7px;
+    left: -59px;
     width: 39px;
     height: 39px;
     border: 1px solid rgb(228, 228, 228);
@@ -529,7 +533,7 @@
     position: absolute;
     content: "";
     top: 7px;
-    left: 8px;
+    left: -49px;
     width: 21px;
     height: 16px;
     background-image: url("../img/icon-tick.svg");
@@ -564,19 +568,22 @@
     flex-wrap: wrap;
   }
 
-  .filter__section-wrapper:first-of-type {
+  .filter__container {
+    width: 1220px;
+    margin: 0 auto;
+    padding-left: 0;
+  }
+
+  .filter__section-wrapper {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-
     .container-desktop();
+    margin-bottom: 70px;
   }
 
   .filter__section-pers {
-    .container-desktop();
-    margin-bottom: 51px;
-    padding-top: 3px;
-    padding-left: 0;
+    .ident-reset();
   }
 
   .filter__section-pers div {
@@ -584,32 +591,38 @@
     margin-bottom: 19px;
   }
 
+  .filter__section-pers div:last-child {
+    margin-bottom: 0;
+  }
+
   .filter__section-radio {
     width: 570px;
-    margin-bottom: 72px;
-    margin-left: 0;
-    padding-top: 5px;
-    padding-left: 0;
-
+    .ident-reset();
     border: 1px solid @color-lightgray;
   }
 
-  .filter__section-radio div {
-    margin-bottom: 30px;
-  }
-
-  .filter__section-radio div:first-of-type {
-    padding-top: 15px;
-  }
-
-  .filter__section-radio .page-content__container {
+  .filter__container-radio {
+    flex-grow: 0;
     width: 570px;
+    .ident-reset();
+  }
+
+  .page-content__container-inner {
+    box-sizing: border-box;
+    width: 570px;
+    padding-left: 87px;
+    padding-right: 20px;
+    padding-top: 36px;
+  }
+
+  .page-content__container-inner div {
+    margin-bottom: 30px;
   }
 
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 29px;
+    margin-bottom: 31px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -684,6 +697,11 @@
   .filter__section-wrap-tablet div {
     width: 245px;
     margin-bottom: 31px;
+    padding-left: 58px;
+  }
+
+  .filter__section-wrap-tablet div:nth-child(2n) {
+    padding-left: 58px;
   }
 
   .filter__section-btn {
@@ -708,19 +726,8 @@
       margin-right: 17px;
     }
 
-    &--radio {
-      padding-left: 87px;
-      cursor: pointer;
-    }
-
     &--contact {
       margin-right: 13px;
-    }
-
-    &--checkbox {
-      padding-left: 58px;
-      margin-right: 20px;
-      cursor: pointer;
     }
   }
 
@@ -728,7 +735,7 @@
     position: absolute;
     content: "";
     top: -6px;
-    left: 27px;
+    left: -59px;
     width: 39px;
     height: 39px;
     border-radius: 50%;
@@ -743,7 +750,7 @@
     position: absolute;
     content: "";
     top: 5px;
-    left: 39px;
+    left: -48px;
     width: 18px;
     height: 18px;
     background-color: @color-green;
@@ -754,7 +761,7 @@
     position: absolute;
     content: "";
     top: -7px;
-    left: -2px;
+    left: -60px;
     width: 39px;
     height: 39px;
     border: 1px solid rgb(228, 228, 228);
@@ -767,8 +774,8 @@
   .filter__section-extra input[type="checkbox"]:checked + label::after {
     position: absolute;
     content: "";
-    top: 7px;
-    left: 8px;
+    top: 6px;
+    left: -50px;
     width: 21px;
     height: 16px;
     background-image: url("../img/icon-tick.svg");
