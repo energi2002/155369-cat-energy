@@ -14,9 +14,10 @@
     }
   }
 
-  .page-footer__container {
+  .page-footer__container,
+  .page-footer__container-bottom {
     .container-mobile();
-    padding-top: 31px;
+    padding-top: 32px;
     padding-bottom: 28px;
   }
 }
@@ -37,12 +38,12 @@
     }
   }
 
-  .page-footer__container {
+  .page-footer__container-bottom {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: row;
-    padding-top: 55px;
     .container-tablet();
+    padding-top: 55px;
   }
 }
 
@@ -68,5 +69,13 @@
   .page-footer__container {
     .container-desktop();
     padding-top: 19px;
+  }
+
+  .page-footer__container-bottom {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    .container-desktop();
+    padding-top: 20px;
   }
 }

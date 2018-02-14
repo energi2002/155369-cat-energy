@@ -88,10 +88,23 @@
 
 @media (min-width: @tablet) {
   .example {
+    position: relative;
     width: 100%;
     min-height: 1083px;
     margin: 0 auto;
     background-image: linear-gradient(@color-gray 1px, @color-white 1px, @color-white 621px, @color-gray 621px);
+  }
+
+  .example::before {
+    position: absolute;
+    content: "";
+    top: 621px;
+    left: 50%;
+
+    width: 100%;
+    height: 462px;
+
+    background-color: rgb(234, 234, 234);
   }
 
   .example__container {
@@ -178,6 +191,18 @@
     min-height: 620px;
     margin: 0 auto;
     background-image: linear-gradient(@color-white 205px, @color-gray 205px);
+  }
+
+  .example::before {
+    position: absolute;
+    content: "";
+    top: 205px;
+    left: 75%;
+
+    width: 100%;
+    height: 462px;
+
+    background-color: rgb(234, 234, 234);
   }
 
   .example__container {

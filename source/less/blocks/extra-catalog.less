@@ -12,16 +12,29 @@
   }
 
   .extra-catalog__order-all {
+    position: relative;
     min-height: 289px;
     margin-left: -2px;
 
-    background: url("../img/icon-gift.svg") no-repeat 113px 63px, url("../img/gift-photo-mobile@1x.jpg") no-repeat;
-    background-size: 55px 62px, 280px 289px;
+    background-image: url("../img/gift-photo-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: 280px 289px;
     background-color: @color-green;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-mobile@2x.jpg");
     }
+  }
+
+  .extra-catalog__order-all::before {
+    position: absolute;
+    content: "";
+    top: 64px;
+    left: 113px;
+    width: 55px;
+    height: 62px;
+    background: url("../img/icon-gift.svg") no-repeat;
   }
 
   .extra-catalog__slogan {
@@ -54,14 +67,25 @@
   }
 
   .extra-catalog__order-all {
+    position: relative;
     min-height: 200px;
-    background: url("../img/icon-gift.svg") no-repeat 94px 63px, url("../img/gift-photo-tablet@1x.jpg") no-repeat;
-    background-size: 55px 62px, 708px 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 708px 200px;
     background-color: @color-green;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/gift-photo-tablet@2x.jpg");
     }
+  }
+  .extra-catalog__order-all::before {
+    position: absolute;
+    content: "";
+    top: 66px;
+    left: 94px;
+    width: 55px;
+    height: 62px;
+    background: url("../img/icon-gift.svg") no-repeat;
   }
 
   .extra-catalog__slogan {
@@ -89,8 +113,9 @@
     width: 305px;
     min-height: 200px;
 
-    background: url("../img/icon-gift.svg") no-repeat 94px 63px, url("../img/gift-photo-desktop@1x.jpg") no-repeat;
-    background-size: 55px 62px, 245px 289px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size: 245px 289px;
     background-color: @color-green;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {

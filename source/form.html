@@ -10,10 +10,14 @@
     <header class="page-header page-header--opened">
       <div class="logo">
         <a class="logo__link" href="index.html">
-          <img class="logo__image" src="img/icon-logo-mobile.svg" width="33" height="38" alt="Логотип компании">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="logo__image" src="img/icon-logo-mobile.svg" alt="Логотип компании">
+          </picture>
           <img class="logo__text" src="img/logo-mobile-header.svg" width="101" height="18" alt="Кэт Энерджи">
         </a>
-        <button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+       <!--<button class="page-header__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>-->
       </div>
       <nav class="main-nav">
         <ul class="main-nav__list site-list">
@@ -43,31 +47,31 @@
         <form class="page-content__form filter" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter__section-wrapper">
             <fieldset class="filter__section-pers">
-              <div>
-                <label class="filter__label filter__label--pers" for="name">Имя:<sup>*</sup></label>
+              <div class="filter__section-pers-form">
+                <label class="filter__label filter__label--pers-name" for="name">Имя:<sup>*</sup></label>
                 <input class="filter__input filter__input--pers" type="text" id="name" name="name" placeholder="Барсик">
               </div>
-              <div>
-                <label class="filter__label filter__label--pers" for="weight">Вес (кг):<sup>*</sup></label>
+              <div class="filter__section-pers-form">
+                <label class="filter__label filter__label--pers-weight" for="weight">Вес (кг):<sup>*</sup></label>
                 <input class="filter__input filter__input--pers" type="text" id="weight" name="weight" placeholder="7">
               </div>
-              <div>
+              <div class="filter__section-pers-form">
                 <label class="filter__label filter__label--pers" for="age">Возраст (лет):<sup>*</sup></label>
-                <input class="filter__input filter__input--pers" type="text" id="age" name="age" placeholder="7">
+                <input class="filter__input filter__input--pers-age" type="text" id="age" name="age" placeholder="7">
               </div>
             </fieldset>
             <fieldset class="filter__section-radio">
               <div class="filter__container-radio">
                   <div class="page-content__container-inner">
-                    <div>
+                    <div class="filter__section-radio-form">
                       <input class="filter__input filter__input--radio" type="radio" id="slim" name="programms" value="slim" checked>
                       <label class="filter__label filter__label--radio" for="slim">Похудение</label>
                     </div>
-                    <div>
+                    <div class="filter__section-radio-form">
                       <input class="filter__input filter__input--radio" type="radio" id="power" name="programms" value="power">
                       <label class="filter__label filter__label--radio" for="power">Набор массы</label>
                     </div>
-                    <div>
+                    <div class="filter__section-radio-form">
                       <input class="filter__input filter__input--radio" type="radio" id="advice" name="programms" value="advice">
                       <label class="filter__label filter__label--radio" for="advice">Не знаю (нужен ваш совет)</label>
                     </div>
@@ -77,13 +81,13 @@
           </div>
           <fieldset class="filter__section-contact filter__section--green-line">
             <div class="filter__container">
-              <legend class="filter__title">Контактные данные (владельца кота) </legend>
+              <h2 class="filter__title">Контактные данные (владельца кота) </h2>
               <div class="filter__section-wrap-desk">
-                <div>
+                <div class="filter__section-contact-form">
                   <label class="filter__label filter__label--contact" for="name">E-mail: <sup>*</sup></label>
                   <input class="filter__input filter__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
                 </div>
-                <div>
+                <div class="filter__section-contact-form">
                   <label class="filter__label filter__label--contact" for="tel">Телефон: <sup>*</sup></label>
                   <input class="filter__input filter__input--tel" type="tel" id="tel" name="tel" placeholder="8 (960) 900-60-90">
                 </div>
@@ -92,7 +96,7 @@
           </fieldset>
           <fieldset class="filter__section-comment filter__section--green-line">
             <div class="filter__container">
-              <legend class="filter__title">Комментарий </legend>
+              <h2 class="filter__title">Комментарий </h2>
               <div>
                 <textarea class="filter__input" id="comments" name="comments" rows="8" cols="32" placeholder="Расскажите обо всех повадках кота"></textarea>
               </div>
@@ -100,21 +104,21 @@
           </fieldset>
           <fieldset class="filter__section-extra filter__section--green-line">
             <div class="filter__container">
-            <legend class="filter__title">Дополнительно</legend>
+            <h2 class="filter__title">Дополнительно</h2>
               <div class="filter__section-wrap-tablet">
-                <div>
+                <div class="filter__section-extra-form">
                   <input class="filter__input filter__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
                   <label class="filter__label filter__label--checkbox" for="sweetener">Сахарозаменитель</label>
                 </div>
-                <div>
+               <div class="filter__section-extra-form">
                   <input class="filter__input filter__input--checkbox" type="checkbox" id="water" name="water">
                   <label class="filter__label filter__label--checkbox" for="water">Питьевая вода</label>
                 </div>
-                <div>
+                <div class="filter__section-extra-form">
                   <input class="filter__input filter__input--checkbox" type="checkbox" id="milk" name="milk">
                   <label class="filter__label filter__label--checkbox" for="milk">Молоко</label>
                 </div>
-                <div>
+                <div class="filter__section-extra-form">
                   <input class="filter__input filter__input--checkbox" type="checkbox" id="vitamins" name="vitamins">
                   <label class="filter__label filter__label--checkbox" for="vitamins">Витамины</label>
                 </div>
@@ -122,7 +126,7 @@
             </div>
           </fieldset>
           <div class="filter__section-btn">
-            <button class="filter__btn button button--order button--form">Отправить заявку</button>
+            <button class="filter__btn button button--form">Отправить заявку</button>
             <span class="filter__note"><sup>*</sup> — Обязательные поля</span>
           </div>
         </form>
@@ -137,7 +141,7 @@
       <div class="contacts__map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.32089461602683!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1516650808995" width="320" height="361" style="border:0" allowfullscreen></iframe>
       </div>
-      <div class="page-footer__container">
+      <div class="page-footer__container-bottom">
         <img class="logo-footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип компании">
         <div class="page-footer__social social">
           <ul class="social__list">

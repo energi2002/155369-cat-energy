@@ -4,8 +4,7 @@
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
-    margin-bottom: 29px;
+    margin-bottom: 27px;
   }
 
   .filter__container,
@@ -40,13 +39,17 @@
     border: 1px solid rgb(230, 230, 230);
   }
 
+  .filter__input--pers-age {
+    width: 136px;
+  }
+
   .filter__section-pers {
     .container-mobile();
     margin-bottom: 8px;
   }
 
-  .filter__section-pers div,
-  .filter__section-wrap-desk div {
+  .filter__section-pers-form,
+  .filter__section-contact-form {
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -65,7 +68,7 @@
     padding-left: 47px;
   }
 
-  .page-content__container-inner div {
+  .filter__section-radio-form {
     margin-bottom: 23px;
   }
 
@@ -88,9 +91,9 @@
   .filter__section-contact .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 188px;
+    max-width: 195px;
     padding-left: 40px;
-    padding-right: 13px;
+    padding-right: 12px;
     margin: 0 0 34px -40px;
     background-color: @color-white;
     z-index: 1;
@@ -110,9 +113,9 @@
   .filter__section-extra .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 188px;
+    max-width: 130px;
     padding-left: 40px;
-    padding-right: 21px;
+    padding-right: 16px;
     margin: 0 0 32px -40px;
     background-color: @color-white;
     z-index: 1;
@@ -134,7 +137,7 @@
     margin-bottom: 15px;
   }
 
-  .filter__section-extra div {
+  .filter__section-extra-form {
     margin-bottom: 23px;
   }
 
@@ -184,7 +187,15 @@
     color: @color-middlegray;
 
     &--pers {
-      margin-right: 14px;
+      margin-right: 12px;
+    }
+
+    &--pers-name {
+      margin-right: 16px;
+    }
+
+    &--pers-weight {
+      margin-right: 18px;
     }
 
     &--radio,
@@ -298,15 +309,16 @@
   }
 
   .filter__section-pers {
-    box-sizing: border-box;
     width: 636px;
+    padding: 0;
     margin-bottom: 53px;
     padding-top: 3px;
     padding-left: 6px;
+    box-sizing: border-box;
   }
 
-  .filter__section-pers div,
-  .filter__section-wrap-desk div {
+  .filter__section-pers-form,
+  .filter__section-contact-form {
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -335,7 +347,7 @@
     padding-top: 34px;
   }
 
-  .page-content__container-inner div {
+  .filter__section-radio-form {
     margin-bottom: 30px;
   }
 
@@ -376,12 +388,24 @@
     background-color: @color-green;
   }
 
-  .filter__section-contact .filter__title,
+  .filter__section-contact .filter__title {
+    position: relative;
+    display: inline-block;
+    max-width: 555px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 0 75px -40px;
+
+    background-color: @color-white;
+    z-index: 1;
+  }
+
   .filter__section-comment .filter__title,
   .filter__section-extra .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 512px;
+    max-width: 220px;
 
     padding-left: 40px;
     padding-right: 40px;
@@ -406,7 +430,7 @@
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .filter__section-extra .filter__title {
@@ -430,18 +454,14 @@
     padding-left: 0;
   }
 
-  .filter__section-extra div {
-    margin-bottom: 12px;
-  }
-
-  .filter__section-wrap-tablet div {
+  .filter__section-extra-form {
     width: 318px;
     padding-left: 60px;
     margin-bottom: 50px;
     box-sizing: border-box;
   }
 
-  .filter__section-wrap-tablet div:nth-child(even) {
+  .filter__section-extra-form:nth-child(even) {
     padding-left: 83px;
   }
 
@@ -474,7 +494,7 @@
     color: @color-middlegray;
 
     &--pers {
-      margin-right: 16px;
+      margin-right: 10px;
     }
 
     &--contact {
@@ -583,12 +603,12 @@
     .ident-reset();
   }
 
-  .filter__section-pers div {
+  .filter__section-pers-form {
     width: 570px;
     margin-bottom: 19px;
   }
 
-  .filter__section-pers div:last-child {
+  .filter__section-pers-form:last-child {
     margin-bottom: 0;
   }
 
@@ -612,19 +632,20 @@
     padding-top: 36px;
   }
 
-  .page-content__container-inner div {
+  .filter__section-radio-form {
     margin-bottom: 30px;
   }
 
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 31px;
+    margin-bottom: 51px;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .filter__section-contact div {
+  .filter__section-contact-form {
+    width: 570px;
     margin-bottom: 19px;
   }
 
@@ -637,10 +658,6 @@
     justify-content: space-between;
     flex-direction: row;
     width: 1220px;
-  }
-
-  .filter__section-wrap-desk div {
-    width: 570px;
   }
 
   .filter__input--email {
@@ -675,7 +692,7 @@
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -691,13 +708,13 @@
     flex-wrap: wrap;
   }
 
-  .filter__section-wrap-tablet div {
+  .filter__section-extra-form {
     width: 245px;
     margin-bottom: 31px;
     padding-left: 58px;
   }
 
-  .filter__section-wrap-tablet div:nth-child(2n) {
+  .filter__section-extra-form:nth-child(2n) {
     padding-left: 58px;
   }
 
@@ -705,7 +722,6 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
     .container-desktop();
   }
 
