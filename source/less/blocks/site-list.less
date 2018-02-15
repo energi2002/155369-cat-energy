@@ -68,6 +68,8 @@
 
   .site-list__link {
     display: inline;
+    padding-bottom: 7px;
+
     font-family: @font-family;
     font-weight: @regular;
     font-size: 20px;
@@ -79,5 +81,19 @@
 
   .site-list--white {
     color: @color-white;
+  }
+
+  .site-list--white:hover {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  site-list--white:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  .site-list__link--active-white,
+  .site-list__link--active-white:hover {
+    color: @color-white;
+    border-bottom: 3px solid @color-white;
   }
 }

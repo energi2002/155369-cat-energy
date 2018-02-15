@@ -47,62 +47,37 @@
 }
 
 @media (min-width: @tablet) {
-
   .slider__list {
     position: relative;
     .ident-reset();
-    margin-bottom: 17px;
+    margin-bottom: 20px;
   }
 
   .slider__item--after {
     display: block;
-  }
-
-  .slider__item {
-    display: block;
+    margin: 0 auto;
     width: 690px;
   }
 
-  .slider__item img {
-    display: block;
-    width: 690px;
-    height: auto;
-  }
-
-  .slider__item--before {
+   .slider__item--before {
     position: absolute;
     top: 0;
-    left: 0;
-    width: 345px;
+    left: 15px;
+    width: 340px;
     overflow: hidden;
-  }
-
-  .slider__pic--before {
-    width: 690px;
-  }
-
-  /*.slider__item--before {
-    width: 690px;
-    margin-left: -350px;
-    overflow: hidden;
-  }
-
-  .slider__pic--before {
-    width: 690px;
-    margin-left: 352px;
-  }
-
-  .slider__item--after {
-    display: block;
-    width: 690px;
-    margin-right: -350px;
-    overflow: hidden;
+    background-image: linear-gradient(to bottom, @color-white 0%, @color-white 171px, rgba(255, 255, 255, 0) 171px, rgba(255, 255, 255, 0) 100%);
   }
 
   .slider__pic--after {
-    width: 690px;
-    margin-left: -338px;
-  } */
+    min-width: 690px;
+    height: auto;
+    margin-left: 6px;
+  }
+
+  .slider__pic--before {
+    min-width: 690px;
+    height: auto;
+  }
 
   .slider__toggles {
     width: 572px;
@@ -139,9 +114,38 @@
 }
 
 @media (min-width: @desktop) {
-  .slider {
+  .slider__list {
     position: relative;
+    .ident-reset();
     padding-top: 13px;
+    margin-bottom: 37px;
+    margin-left: -40px;
+  }
+
+  .slider__item--after {
+    display: block;
+    margin: 0 auto;
+    width: 545px;
+  }
+
+  .slider__item--before {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    width: 365px;
+    overflow: hidden;
+    background-image: linear-gradient(to bottom, @color-white 0%, @color-white 192px, @color-gray 192px, @color-gray 100%);
+  }
+
+  .slider__pic--after {
+    min-width: 545px;
+    height: auto;
+    margin-left: 38px;
+  }
+
+  .slider__pic--before {
+    min-width: 650px;
+    height: auto;
   }
 
   .slider__toggles {
