@@ -1,6 +1,5 @@
 @media (min-width: @mobile) {
   .catmeal {
-    width: 100%;
     margin: 0 auto;
     margin-bottom: 21px;
 
@@ -16,7 +15,7 @@
     }
   }
 
-  .catmeal__wrapper {
+  .catmeal__container {
     .container-mobile();
   }
 
@@ -51,7 +50,6 @@
 
 @media (min-width: @tablet) {
   .catmeal {
-    width: 100%;
     min-height: 802px;
     margin: 0 auto;
 
@@ -67,15 +65,11 @@
 
   .catmeal__container {
     .container-tablet();
-  }
-
-  .catmeal__wrapper {
-    width: 450px;
-    .ident-reset();
     margin-left: 87px;
   }
 
   .catmeal__title {
+    width: 450px;
     .ident-reset();
     margin-bottom: 40px;
 
@@ -113,17 +107,16 @@
 
 @media (min-width: @desktop) {
   .catmeal {
-    width: 100%;
     min-height: 696px;
+    .ident-reset();
     margin: 0 auto;
     margin-bottom: 76px;
 
-    background: url("../img/index-can-desktop@1x.png") no-repeat 490px 141px,
-      url("../img/index-background-desktop@1x.jpg") no-repeat 690px top;
-    background-size: 552px 499px, 680px 696px;
-    background-color: linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
+   background: url("../img/index-can-desktop@1x.png") no-repeat 490px 141px,
+     url("../img/index-background-desktop@1x.jpg") no-repeat 690px top,
+     linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
 
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+   @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-desktop@2x.png"),
         url("../img/index-background-desktop@2x.jpg");
     }
@@ -131,10 +124,6 @@
 
   .catmeal__container {
     .container-desktop();
-  }
-
-  .catmeal__wrapper {
-    width: 486px;
     margin-left: 81px;
     padding-top: 223px;
   }

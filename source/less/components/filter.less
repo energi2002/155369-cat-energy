@@ -9,8 +9,7 @@
 
   .filter__container,
   .filter__container-radio {
-    width: 280px;
-    margin: 0 auto;
+    .container-mobile();
   }
 
   .filter__section-wrapper {
@@ -35,8 +34,12 @@
 
   .filter__input {
     flex-grow: 1;
-    padding: 13px;
+    height: 45px;
+    padding: 13px 13px 12px 14px;
+    box-sizing: border-box;
+
     border: 1px solid rgb(230, 230, 230);
+    .font-placeholder-mobile();
   }
 
   .filter__input--pers-age {
@@ -94,7 +97,7 @@
     max-width: 195px;
     padding-left: 40px;
     padding-right: 12px;
-    margin: 0 0 34px -40px;
+    margin: 0 0 32px -40px;
     background-color: @color-white;
     z-index: 1;
   }
@@ -105,7 +108,7 @@
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 171px 12px;
+    background: url("../img/icon-phone.svg") no-repeat 169px 12px;
     background-size: 20px 20px;
   }
 
@@ -116,7 +119,7 @@
     max-width: 130px;
     padding-left: 40px;
     padding-right: 16px;
-    margin: 0 0 32px -40px;
+    margin: 0 0 33px -40px;
     background-color: @color-white;
     z-index: 1;
   }
@@ -128,13 +131,16 @@
   }
 
   .filter__section-comment textarea {
+    width: 280px;
+    min-height: 150px;
     resize: none;
+    box-sizing: border-box;
   }
 
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
   .filter__section-extra-form {
@@ -186,16 +192,17 @@
     text-transform: uppercase;
     color: @color-middlegray;
 
-    &--pers {
-      margin-right: 12px;
+    &--pers-age {
+      margin-right: 11px;
+      white-space: nowrap;
     }
 
     &--pers-name {
-      margin-right: 16px;
+      margin-right: 15px;
     }
 
     &--pers-weight {
-      margin-right: 18px;
+      margin-right: 16px;
     }
 
     &--radio,
@@ -204,7 +211,15 @@
     }
 
     &--contact {
-      margin-right: 8px;
+      margin-right: 10px;
+    }
+
+    &--email {
+      margin-right: 11px;
+    }
+
+    &--tel {
+      margin-right: 9px;
     }
   }
 
@@ -294,18 +309,27 @@
 
 @media (min-width: @tablet) {
   .filter {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
   }
 
   .filter__container {
     width: 636px;
+    .ident-reset();
     padding-left: 6px;
     margin: 0 auto;
   }
 
   .filter__input {
-    padding: 17px 20px;
+    height: 53px;
+    padding: 14px 20px 13px 20px;
+    box-sizing: border-box;
+    .font-placeholder-tablet();
     border: 1px solid rgb(230, 230, 230);
+  }
+
+  .filter__input--email,
+  .filter__input--tel {
+    padding: 15px 20px 13px 20px;
   }
 
   .filter__section-pers {
@@ -348,7 +372,7 @@
   }
 
   .filter__section-radio-form {
-    margin-bottom: 30px;
+    margin-bottom: 31px;
   }
 
   .filter__section-wrapper {
@@ -362,22 +386,21 @@
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .filter__input--email {
-    background: url("../img/icon-mail.svg") no-repeat 515px 20px;
+    background: url("../img/icon-mail.svg") no-repeat 513px 20px;
     background-size: 17px 13px;
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 495px 18px;
+    background: url("../img/icon-phone.svg") no-repeat 500px 18px;
     background-size: 20px 20px;
   }
 
   .filter__section--green-line::after {
     content: "";
-
     position: absolute;
     top: 20px;
     right: 0;
@@ -389,13 +412,14 @@
   }
 
   .filter__section-contact .filter__title {
+    .ident-reset();
     position: relative;
     display: inline-block;
     max-width: 555px;
 
     padding-left: 40px;
     padding-right: 40px;
-    margin: 0 0 75px -40px;
+    margin: 0 0 73px -40px;
 
     background-color: @color-white;
     z-index: 1;
@@ -422,8 +446,8 @@
   }
 
   .filter__section-comment textarea {
-    width: 595px;
-    min-height: 137px;
+    width: 630px;
+    min-height: 173px;
     resize: none;
   }
 
@@ -490,15 +514,28 @@
   }
 
   .filter__label {
+    .ident-reset();
     .font-text-middle-tablet();
     color: @color-middlegray;
 
-    &--pers {
+    &--pers-age {
       margin-right: 10px;
     }
 
-    &--contact {
+    &--pers-weight {
+      margin-right: 20px;
+    }
+
+    &--pers-name {
+      margin-right: 18px;
+    }
+
+    &--tel {
       margin-right: 13px;
+    }
+
+    &--email {
+      margin-right: 20px;
     }
   }
 
@@ -599,6 +636,11 @@
     margin-bottom: 70px;
   }
 
+  .filter__input--email,
+  .filter__input--tel {
+    padding: 15px 20px 11px 20px;
+  }
+
   .filter__section-pers {
     .ident-reset();
   }
@@ -639,7 +681,7 @@
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 51px;
+    margin-bottom: 49px;
     padding-left: 0;
     padding-right: 0;
   }
@@ -650,7 +692,7 @@
   }
 
   .filter__section-contact .filter__title {
-    margin-bottom: 74px;
+    margin-bottom: 76px;
   }
 
   .filter__section-wrap-desk {
@@ -661,12 +703,12 @@
   }
 
   .filter__input--email {
-    background: url("../img/icon-mail.svg") no-repeat 452px 20px;
+    background: url("../img/icon-mail.svg") no-repeat 448px 18px;
     background-size: 17px 13px;
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 431px 17px;
+    background: url("../img/icon-phone.svg") no-repeat 433px 15px;
     background-size: 20px 20px;
   }
 
@@ -683,8 +725,8 @@
   }
 
   .filter__section-comment textarea {
-    width: 1184px;
-    min-height: 137px;
+    width: 1218px;
+    min-height: 174px;
     padding-left: 17px;
     resize: none;
   }
@@ -698,7 +740,7 @@
   }
 
   .filter__section-extra .filter__title {
-    margin-bottom: 68px;
+    margin-bottom: 66px;
   }
 
   .filter__section-wrap-tablet {
