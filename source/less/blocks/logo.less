@@ -11,7 +11,9 @@
   }
 
   .logo__image {
-    margin-top: -3px;
+    width: 33px;
+    height: 38px;
+    padding-top: 11px;
     margin-right: 56px;
   }
 
@@ -21,11 +23,6 @@
     flex-direction: row;
     height: 65px;
     .container-mobile();
-  }
-
-  .logo__footer {
-    padding-left: 76px;
-    padding-bottom: 30px;
   }
 }
 
@@ -37,12 +34,28 @@
 
   .logo__link {
     width: 192px;
+    .ident-reset();
+    padding-top: 3px;
     border-bottom: none;
   }
 
-  .logo__footer {
-    padding-left: 3px;
-    padding-bottom: 28px;
+  .logo__image {
+    width: 173px;
+    height: 58px;
+    padding-top: 0;
+    margin-right: 0;
+  }
+
+  .logo__image:hover {
+    opacity: 0.8;
+  }
+
+  .logo__image:active {
+    opacity: 0.6;
+  }
+
+  .logo__text {
+    display: none;
   }
 }
 
@@ -53,12 +66,12 @@
 
   .logo__link {
     width: 245px;
-    //height: 80px;
   }
 
-  .logo__footer {
-    padding-top: 5px;
-    padding-left: 0;
-    padding-bottom: 28px;
+  .logo__image {
+    width: 202px;
+    height: 60px;
+    padding-top: 0;
+    margin-right: 0;
   }
 }

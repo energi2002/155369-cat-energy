@@ -21,12 +21,16 @@
     padding-left: 18px;
     padding-right: 18px;
   }
+
+  .social__link--instagram svg {
+    margin-left: 2px;
+  }
 }
 
 @media (min-width: @tablet) {
   .social {
-    margin-left: 45px;
-    margin-rigth: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
     border-top: 0;
     border-bottom: 0;
   }
@@ -36,8 +40,14 @@
     display: flex;
     justify-content: center;
     flex-direction: row;
-    width: 355px;
+    width: 335px;
     list-style: none;
+  }
+
+  .social__item {
+    width: 22px;
+    padding-left: 20px;
+    padding-right: 11px;
   }
 
   .social__link--vkontakte svg {
@@ -60,7 +70,7 @@
 
 @media (min-width: @desktop) {
   .social {
-    margin-left: 128px;
+    margin-left: 122px;
     margin-right: 40px;
     border-top: 0;
     border-bottom: 0;
@@ -69,9 +79,14 @@
   .social__list {
     .ident-reset();
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-direction: row;
     width: 700px;
     list-style: none;
+  }
+
+  .social__link--vkontakte svg {
+    margin-top: -4px;
+    margin-left: -4px;
   }
 }

@@ -13,12 +13,21 @@
 
 @media (min-width: @tablet) {
   .main-catalog {
+    .ident-reset();
     .container-tablet();
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 @media (min-width: @desktop) {
   .main-catalog {
     .container-desktop();
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }

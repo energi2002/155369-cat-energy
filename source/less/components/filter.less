@@ -4,14 +4,12 @@
     align-items: flex-start;
     flex-direction: row;
     flex-wrap: wrap;
-
-    margin-bottom: 29px;
+    margin-bottom: 27px;
   }
 
   .filter__container,
   .filter__container-radio {
-    width: 280px;
-    margin: 0 auto;
+    .container-mobile();
   }
 
   .filter__section-wrapper {
@@ -36,8 +34,16 @@
 
   .filter__input {
     flex-grow: 1;
-    padding: 13px;
+    height: 45px;
+    padding: 13px 13px 12px 14px;
+    box-sizing: border-box;
+
     border: 1px solid rgb(230, 230, 230);
+    .font-placeholder-mobile();
+  }
+
+  .filter__input--pers-age {
+    width: 136px;
   }
 
   .filter__section-pers {
@@ -45,8 +51,8 @@
     margin-bottom: 8px;
   }
 
-  .filter__section-pers div,
-  .filter__section-wrap-desk div {
+  .filter__section-pers-form,
+  .filter__section-contact-form {
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -65,7 +71,7 @@
     padding-left: 47px;
   }
 
-  .page-content__container-inner div {
+  .filter__section-radio-form {
     margin-bottom: 23px;
   }
 
@@ -88,10 +94,10 @@
   .filter__section-contact .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 188px;
+    max-width: 195px;
     padding-left: 40px;
-    padding-right: 13px;
-    margin: 0 0 34px -40px;
+    padding-right: 12px;
+    margin: 0 0 32px -40px;
     background-color: @color-white;
     z-index: 1;
   }
@@ -102,7 +108,7 @@
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 171px 12px;
+    background: url("../img/icon-phone.svg") no-repeat 169px 12px;
     background-size: 20px 20px;
   }
 
@@ -110,10 +116,10 @@
   .filter__section-extra .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 188px;
+    max-width: 130px;
     padding-left: 40px;
-    padding-right: 21px;
-    margin: 0 0 32px -40px;
+    padding-right: 16px;
+    margin: 0 0 33px -40px;
     background-color: @color-white;
     z-index: 1;
   }
@@ -125,16 +131,19 @@
   }
 
   .filter__section-comment textarea {
+    width: 280px;
+    min-height: 150px;
     resize: none;
+    box-sizing: border-box;
   }
 
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
   }
 
-  .filter__section-extra div {
+  .filter__section-extra-form {
     margin-bottom: 23px;
   }
 
@@ -183,8 +192,17 @@
     text-transform: uppercase;
     color: @color-middlegray;
 
-    &--pers {
-      margin-right: 14px;
+    &--pers-age {
+      margin-right: 11px;
+      white-space: nowrap;
+    }
+
+    &--pers-name {
+      margin-right: 15px;
+    }
+
+    &--pers-weight {
+      margin-right: 16px;
     }
 
     &--radio,
@@ -193,7 +211,15 @@
     }
 
     &--contact {
-      margin-right: 8px;
+      margin-right: 10px;
+    }
+
+    &--email {
+      margin-right: 11px;
+    }
+
+    &--tel {
+      margin-right: 9px;
     }
   }
 
@@ -283,30 +309,40 @@
 
 @media (min-width: @tablet) {
   .filter {
-    margin-bottom: 49px;
+    margin-bottom: 52px;
   }
 
   .filter__container {
     width: 636px;
+    .ident-reset();
     padding-left: 6px;
     margin: 0 auto;
   }
 
   .filter__input {
-    padding: 17px 20px;
+    height: 53px;
+    padding: 14px 20px 13px 20px;
+    box-sizing: border-box;
+    .font-placeholder-tablet();
     border: 1px solid rgb(230, 230, 230);
   }
 
+  .filter__input--email,
+  .filter__input--tel {
+    padding: 15px 20px 13px 20px;
+  }
+
   .filter__section-pers {
-    box-sizing: border-box;
     width: 636px;
+    padding: 0;
     margin-bottom: 53px;
     padding-top: 3px;
     padding-left: 6px;
+    box-sizing: border-box;
   }
 
-  .filter__section-pers div,
-  .filter__section-wrap-desk div {
+  .filter__section-pers-form,
+  .filter__section-contact-form {
     display: flex;
     align-items: baseline;
     flex-direction: row;
@@ -335,8 +371,8 @@
     padding-top: 34px;
   }
 
-  .page-content__container-inner div {
-    margin-bottom: 30px;
+  .filter__section-radio-form {
+    margin-bottom: 31px;
   }
 
   .filter__section-wrapper {
@@ -350,22 +386,21 @@
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 50px;
+    margin-bottom: 48px;
   }
 
   .filter__input--email {
-    background: url("../img/icon-mail.svg") no-repeat 515px 20px;
+    background: url("../img/icon-mail.svg") no-repeat 513px 20px;
     background-size: 17px 13px;
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 495px 18px;
+    background: url("../img/icon-phone.svg") no-repeat 500px 18px;
     background-size: 20px 20px;
   }
 
   .filter__section--green-line::after {
     content: "";
-
     position: absolute;
     top: 20px;
     right: 0;
@@ -376,12 +411,25 @@
     background-color: @color-green;
   }
 
-  .filter__section-contact .filter__title,
+  .filter__section-contact .filter__title {
+    .ident-reset();
+    position: relative;
+    display: inline-block;
+    max-width: 555px;
+
+    padding-left: 40px;
+    padding-right: 40px;
+    margin: 0 0 73px -40px;
+
+    background-color: @color-white;
+    z-index: 1;
+  }
+
   .filter__section-comment .filter__title,
   .filter__section-extra .filter__title {
     position: relative;
     display: inline-block;
-    max-width: 512px;
+    max-width: 220px;
 
     padding-left: 40px;
     padding-right: 40px;
@@ -398,15 +446,15 @@
   }
 
   .filter__section-comment textarea {
-    width: 595px;
-    min-height: 137px;
+    width: 630px;
+    min-height: 173px;
     resize: none;
   }
 
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 0;
+    margin-bottom: 10px;
   }
 
   .filter__section-extra .filter__title {
@@ -430,18 +478,14 @@
     padding-left: 0;
   }
 
-  .filter__section-extra div {
-    margin-bottom: 12px;
-  }
-
-  .filter__section-wrap-tablet div {
+  .filter__section-extra-form {
     width: 318px;
     padding-left: 60px;
     margin-bottom: 50px;
     box-sizing: border-box;
   }
 
-  .filter__section-wrap-tablet div:nth-child(even) {
+  .filter__section-extra-form:nth-child(even) {
     padding-left: 83px;
   }
 
@@ -470,15 +514,28 @@
   }
 
   .filter__label {
+    .ident-reset();
     .font-text-middle-tablet();
     color: @color-middlegray;
 
-    &--pers {
-      margin-right: 16px;
+    &--pers-age {
+      margin-right: 10px;
     }
 
-    &--contact {
+    &--pers-weight {
+      margin-right: 20px;
+    }
+
+    &--pers-name {
+      margin-right: 18px;
+    }
+
+    &--tel {
       margin-right: 13px;
+    }
+
+    &--email {
+      margin-right: 20px;
     }
   }
 
@@ -579,16 +636,21 @@
     margin-bottom: 70px;
   }
 
+  .filter__input--email,
+  .filter__input--tel {
+    padding: 15px 20px 11px 20px;
+  }
+
   .filter__section-pers {
     .ident-reset();
   }
 
-  .filter__section-pers div {
+  .filter__section-pers-form {
     width: 570px;
     margin-bottom: 19px;
   }
 
-  .filter__section-pers div:last-child {
+  .filter__section-pers-form:last-child {
     margin-bottom: 0;
   }
 
@@ -612,24 +674,25 @@
     padding-top: 36px;
   }
 
-  .page-content__container-inner div {
+  .filter__section-radio-form {
     margin-bottom: 30px;
   }
 
   .filter__section-contact {
     position: relative;
     width: 100%;
-    margin-bottom: 31px;
+    margin-bottom: 49px;
     padding-left: 0;
     padding-right: 0;
   }
 
-  .filter__section-contact div {
+  .filter__section-contact-form {
+    width: 570px;
     margin-bottom: 19px;
   }
 
   .filter__section-contact .filter__title {
-    margin-bottom: 74px;
+    margin-bottom: 76px;
   }
 
   .filter__section-wrap-desk {
@@ -639,17 +702,13 @@
     width: 1220px;
   }
 
-  .filter__section-wrap-desk div {
-    width: 570px;
-  }
-
   .filter__input--email {
-    background: url("../img/icon-mail.svg") no-repeat 452px 20px;
+    background: url("../img/icon-mail.svg") no-repeat 448px 18px;
     background-size: 17px 13px;
   }
 
   .filter__input--tel {
-    background: url("../img/icon-phone.svg") no-repeat 431px 17px;
+    background: url("../img/icon-phone.svg") no-repeat 433px 15px;
     background-size: 20px 20px;
   }
 
@@ -666,8 +725,8 @@
   }
 
   .filter__section-comment textarea {
-    width: 1184px;
-    min-height: 137px;
+    width: 1218px;
+    min-height: 174px;
     padding-left: 17px;
     resize: none;
   }
@@ -675,13 +734,13 @@
   .filter__section-extra {
     position: relative;
     width: 100%;
-    margin-bottom: 25px;
+    margin-bottom: 35px;
     padding-left: 0;
     padding-right: 0;
   }
 
   .filter__section-extra .filter__title {
-    margin-bottom: 68px;
+    margin-bottom: 66px;
   }
 
   .filter__section-wrap-tablet {
@@ -691,13 +750,13 @@
     flex-wrap: wrap;
   }
 
-  .filter__section-wrap-tablet div {
+  .filter__section-extra-form {
     width: 245px;
     margin-bottom: 31px;
     padding-left: 58px;
   }
 
-  .filter__section-wrap-tablet div:nth-child(2n) {
+  .filter__section-extra-form:nth-child(2n) {
     padding-left: 58px;
   }
 
@@ -705,7 +764,6 @@
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
     .container-desktop();
   }
 

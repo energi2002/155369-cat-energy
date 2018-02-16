@@ -16,7 +16,13 @@
 
   .page-footer__container {
     .container-mobile();
-    padding-top: 31px;
+    padding-top: 30px;
+    padding-bottom: 28px;
+  }
+
+  .page-footer__container-bottom {
+    .container-mobile();
+    padding-top: 32px;
     padding-bottom: 28px;
   }
 }
@@ -37,12 +43,12 @@
     }
   }
 
-  .page-footer__container {
+  .page-footer__container-bottom {
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     flex-direction: row;
-    padding-top: 55px;
     .container-tablet();
+    padding-top: 55px;
   }
 }
 
@@ -66,6 +72,14 @@
   }
 
   .page-footer__container {
+    .container-desktop();
+    padding-top: 18px;
+  }
+
+  .page-footer__container-bottom {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
     .container-desktop();
     padding-top: 19px;
   }
