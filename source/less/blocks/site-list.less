@@ -51,6 +51,8 @@
   .site-list__link {
     .ident-reset();
     display: inline;
+    padding-bottom: 7px;
+
     font-family: @font-family;
     font-weight: @regular;
     font-size: 18px;
@@ -58,6 +60,20 @@
     letter-spacing: 0;
     text-transform: uppercase;
     color: @color-middlegray;
+  }
+
+  .site-list__link:hover {
+    color: rgba(34, 34, 34, 0.6);
+  }
+
+  .site-list__link:active {
+    color: rgba(34, 34, 34, 0.3);
+  }
+
+  .site-list__link--active,
+  .site-list__link--active:hover {
+    color: @color-middlegray;
+    border-bottom: 3px solid @color-green;
   }
 }
 

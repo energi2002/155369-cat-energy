@@ -7,6 +7,7 @@
   }
 
   .copyright__link {
+    .ident-reset();
     padding-top: 15px;
     font-family: "Arial", sans-serif;
     font-weight: 400;
@@ -18,6 +19,16 @@
 
   .copyright__logo {
     padding-top: 7px;
+  }
+
+  .copyright:hover svg {
+    fill: rgb(104, 183, 56);
+  }
+
+  .copyright:active svg,
+  .copyright:active .copyright__link {
+    color: rgba(68, 68, 68, 0.3);
+    fill: rgba(104, 183, 56, 0.3);
   }
 }
 

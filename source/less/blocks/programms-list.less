@@ -82,6 +82,10 @@
     color: @color-black;
   }
 
+  .programms-list__btn:active {
+    color: rgba(17, 17, 17, 0.3);
+  }
+
   .programms-list__btn::before {
     position: absolute;
     content: "";
@@ -90,6 +94,22 @@
     width: 24px;
     height: 12px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  .programms-list__btn:hover::before {
+    top: 22px;
+    left: 95px;
+    width: 31px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  }
+
+  .programms-list__btn:active::before {
+    top: 22px;
+    left: 95px;
+    width: 31px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-verylong-gray.svg") no-repeat;
   }
 }
 
@@ -192,6 +212,22 @@
     width: 24px;
     height: 12px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
+  }
+
+  .programms-list__btn:hover::before {
+    top: 5px;
+    left: 132px;
+    width: 31px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-verylong.svg") no-repeat;
+  }
+
+  .programms-list__btn:active::before {
+    top: 5px;
+    left: 132px;
+    width: 31px;
+    height: 12px;
+    background: url("../img/icon-right-arrow-verylong-gray.svg") no-repeat;
   }
 }
 

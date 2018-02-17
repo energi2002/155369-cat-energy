@@ -42,6 +42,19 @@
     .font-placeholder-mobile();
   }
 
+  .filter__input:hover {
+    border: 1px solid rgb(205, 205, 205);
+  }
+
+  .filter__input:focus {
+    border: 2px solid @color-black;
+    outline: none;
+  }
+
+  .filter__input:invalid {
+    border: 2px solid rgb(255, 130, 130);
+  }
+
   .filter__input--pers-age {
     width: 136px;
   }
@@ -109,6 +122,26 @@
 
   .filter__input--tel {
     background: url("../img/icon-phone.svg") no-repeat 169px 12px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:focus {
+    background: url("../img/icon-mail-green.svg") no-repeat 186px 14px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:focus {
+    background: url("../img/icon-phone-green.svg") no-repeat 169px 12px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:invalid {
+    background: url("../img/icon-mail-pink.svg") no-repeat 186px 14px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:invalid {
+    background: url("../img/icon-phone-pink.svg") no-repeat 169px 12px;
     background-size: 20px 20px;
   }
 
@@ -258,6 +291,15 @@
     border-radius: 50%;
   }
 
+  .filter__section-radio input[type="radio"]:disabled + label::before,
+  .filter__section-radio input[type="radio"]:disabled + label:hover::before {
+    border: 1px solid rgba(228, 228, 228, 0.3);
+  }
+
+  .filter__section-radio input[type="radio"]:disabled + label {
+    color: rgba(34, 34, 34, 0.3);
+  }
+
   .filter__section-extra label {
     position: relative;
   }
@@ -286,6 +328,15 @@
     background-image: url("../img/icon-tick.svg");
     background-repeat: no-repeat;
     background-position: center;
+  }
+
+  .filter__section-extra input[type="checkbox"]:disabled + label::before,
+  .filter__section-extra input[type="checkbox"]:disabled + label:hover::before {
+    border: 1px solid rgba(228, 228, 228, 0.3);
+  }
+
+  .filter__section-extra input[type="checkbox"]:disabled + label {
+    color: rgba(34, 34, 34, 0.3);
   }
 
   .filter__input::-webkit-input-placeholder {
@@ -396,6 +447,26 @@
 
   .filter__input--tel {
     background: url("../img/icon-phone.svg") no-repeat 500px 18px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:focus {
+    background: url("../img/icon-mail-green.svg") no-repeat 513px 20px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:focus {
+    background: url("../img/icon-phone-green.svg") no-repeat 500px 18px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:invalid {
+    background: url("../img/icon-mail-pink.svg") no-repeat 513px 20px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:invalid {
+    background: url("../img/icon-phone-pink.svg") no-repeat 500px 18px;
     background-size: 20px 20px;
   }
 
@@ -692,7 +763,7 @@
   }
 
   .filter__section-contact .filter__title {
-    margin-bottom: 76px;
+    margin-bottom: 74px;
   }
 
   .filter__section-wrap-desk {
@@ -709,6 +780,26 @@
 
   .filter__input--tel {
     background: url("../img/icon-phone.svg") no-repeat 433px 15px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:focus {
+    background: url("../img/icon-mail-green.svg") no-repeat 448px 18px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:focus {
+    background: url("../img/icon-phone-green.svg") no-repeat 433px 15px;
+    background-size: 20px 20px;
+  }
+
+  .filter__input--email:invalid {
+    background: url("../img/icon-mail-pink.svg") no-repeat 448px 18px;
+    background-size: 17px 13px;
+  }
+
+  .filter__input--tel:invalid {
+    background: url("../img/icon-phone-pink.svg") no-repeat 433px 15px;
     background-size: 20px 20px;
   }
 

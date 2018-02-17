@@ -99,6 +99,10 @@
     .font-text-middle-tablet;
   }
 
+  .slider__toggle-title:hover {
+     border-bottom: 1px solid rgb(190, 190, 190);
+  }
+
   .slider__toggle {
     position: absolute;
     top: -6px;
@@ -107,9 +111,18 @@
     width: 8px;
     height: 8px;
     border: 12px solid @color-white;
+    box-shadow: 0 0 0 1px rgb(206, 206, 206);
     border-radius: 50%;
     background-color: @color-green;
     cursor: pointer;
+  }
+
+  .slider__toggle:hover {
+    box-shadow: 0 0 0 1px rgb(206, 206, 206), 0 5px 4px 0 rgb(197, 197, 197);
+  }
+
+  .slider__toggle:active {
+    box-shadow: 0 0 0 2px @color-green, 0 5px 4px 0 rgb(177, 177, 177);
   }
 }
 

@@ -8,10 +8,12 @@
       linear-gradient(@color-green 305px, @color-white 305px);
     background-repeat: no-repeat;
     background-position: center top;
-    background-size: 320px 305px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-image:
+        url("../img/index-background-mobile@2x.jpg"),
+        linear-gradient(@color-green 305px, @color-white 305px);
+      background-size: 320px 305px;
     }
   }
 
@@ -53,13 +55,11 @@
     min-height: 802px;
     margin: 0 auto;
 
-    background-image: url("../img/index-can-tablet@1x.jpg");
-    background-repeat: no-repeat;
-    background-position: 29px 198px;
-    background-size: 709px 609px;
+    background: url("../img/index-can-tablet@1x.jpg") no-repeat calc(~"50%") 198px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
+      background-size: 709px 609px;
     }
   }
 
@@ -115,14 +115,18 @@
     margin: 0 auto;
     margin-bottom: 76px;
 
-    background: url("../img/index-can-desktop@1x.png") no-repeat 490px 141px,
-      url("../img/index-background-desktop@1x.jpg") no-repeat 690px top,
+    background:
+      url("../img/index-can-desktop@1x.png") no-repeat calc(~"50% + 116px") 142px,
+      url("../img/index-background-desktop@1x.jpg") no-repeat calc(~"50% + 380px"),
       linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
+    background-size: 552px 499px, 680px 696px, 100%;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image: url("../img/index-can-desktop@2x.png"),
-        url("../img/index-background-desktop@2x.jpg");
-      background-size: 552px 499px, 680px 696px;
+      background-image:
+        url("../img/index-can-desktop@2x.png"),
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
+      background-size: 552px 499px, 680px 696px, 100%;
     }
   }
 
