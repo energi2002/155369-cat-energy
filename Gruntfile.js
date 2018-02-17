@@ -122,7 +122,8 @@ module.exports = function(grunt) {
          src: [
            "fonts/**/*.{woff,woff2}",
            "img/**",
-           "js/**"
+           "js/**",
+           "*.html"
          ],
          dest: "build"
        }]
@@ -143,6 +144,6 @@ module.exports = function(grunt) {
     "postcss",
     "csso",
     "svgstore",
-    "posthtml"
+    "imagemin"
   ]);
 };
