@@ -1,61 +1,26 @@
-@media (min-width: @mobile) {
-  .catmeal {
-    margin: 0 auto;
-    margin-bottom: 21px;
+.catmeal {
+  margin: 0 auto;
+  margin-bottom: 21px;
+  background-image:
+    url("../img/index-background-mobile@1x.jpg"),
+    linear-gradient(@color-green 305px, @color-white 305px);
+  background-repeat: no-repeat;
+  background-position: center top;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
     background-image:
-      url("../img/index-background-mobile@1x.jpg"),
+      url("../img/index-background-mobile@2x.jpg"),
       linear-gradient(@color-green 305px, @color-white 305px);
-    background-repeat: no-repeat;
-    background-position: center top;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image:
-        url("../img/index-background-mobile@2x.jpg"),
-        linear-gradient(@color-green 305px, @color-white 305px);
-      background-size: 320px 305px;
-    }
+    background-size: 320px 305px;
   }
 
-  .catmeal__container {
-    .container-mobile();
-  }
-
-  .catmeal__title {
-    .ident-reset();
-    padding-top: 30px;
-
-    font-family: @font-family;
-    font-weight: @regular;
-    font-size: 36px;
-    line-height: 36px;
-    letter-spacing: 0;
-    text-align: center;
-    color: @color-white;
-  }
-
-  .catmeal__slogan {
-    .ident-reset();
-    margin-bottom: 29px;
-    padding-top: 22px;
-
-    font-family: @font-family;
-    font-weight: @regular;
-    font-size: 14px;
-    line-height: 14px;
-    letter-spacing: 0;
-    text-align: center;
-    text-transform: uppercase;
-    color: @color-white;
-  }
-}
-
-@media (min-width: @tablet) {
-  .catmeal {
+  @media (min-width: @tablet) {
     min-height: 802px;
     margin: 0 auto;
 
-    background: url("../img/index-can-tablet@1x.jpg") no-repeat calc(~"50%") 198px;
+    background-image: url("../img/index-can-tablet@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: calc(~"50%") 198px;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/index-can-tablet@2x.jpg");
@@ -63,15 +28,55 @@
     }
   }
 
-  .catmeal__container {
+  @media (min-width: @desktop) {
+    min-height: 696px;
+    .ident-reset();
+    margin: 0 auto;
+    margin-bottom: 76px;
+
+    background-image:
+      url("../img/index-can-desktop@1x.png"),
+      url("../img/index-background-desktop@1x.jpg"),
+      linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
+    background-repeat: no-repeat;
+    background-position: calc(~"50% + 116px") 142px, calc(~"50% + 380px") 0, 0 0;
+    background-size: 552px 499px, 680px 696px, 100%;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/index-can-desktop@2x.png"),
+        url("../img/index-background-desktop@2x.jpg"),
+        linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
+      background-size: 552px 499px, 680px 696px, 100%;
+    }
+  }
+}
+
+.catmeal__container {
+  .container-mobile();
+
+  @media (min-width: 768px) {
     .container-tablet();
   }
 
-  .catmeal__wrapper {
-    padding-left: 87px;
+  @media (min-width: 1300px) {
+    .container-desktop();
   }
+}
 
-  .catmeal__title {
+.catmeal__title {
+  .ident-reset();
+  padding-top: 30px;
+
+  font-family: @font-family;
+  font-weight: @regular;
+  font-size: 36px;
+  line-height: 36px;
+  letter-spacing: 0;
+  text-align: center;
+  color: @color-white;
+
+  @media (min-width: 768px) {
     width: 450px;
     .ident-reset();
     margin-bottom: 40px;
@@ -84,8 +89,23 @@
     text-align: left;
     color: @color-black;
   }
+}
 
-  .catmeal__slogan {
+.catmeal__slogan {
+  .ident-reset();
+  margin-bottom: 29px;
+  padding-top: 22px;
+
+  font-family: @font-family;
+  font-weight: @regular;
+  font-size: 14px;
+  line-height: 14px;
+  letter-spacing: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: @color-white;
+
+  @media (min-width: @tablet) {
     .ident-reset();
     margin-bottom: 43px;
 
@@ -99,51 +119,37 @@
     color: @color-black;
   }
 
-  .catmeal__btn {
-    margin-left: 3px;
-  }
-
-  .catmeal__pic {
-    display: none;
+  @media (min-width: @desktop) {
+    margin-bottom: 52px;
   }
 }
 
-@media (min-width: @desktop) {
-  .catmeal {
-    min-height: 696px;
-    .ident-reset();
-    margin: 0 auto;
-    margin-bottom: 76px;
+.catmeal__wrapper {
 
-    background:
-      url("../img/index-can-desktop@1x.png") no-repeat calc(~"50% + 116px") 142px,
-      url("../img/index-background-desktop@1x.jpg") no-repeat calc(~"50% + 380px"),
-      linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
-    background-size: 552px 499px, 680px 696px, 100%;
-
-    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
-      background-image:
-        url("../img/index-can-desktop@2x.png"),
-        url("../img/index-background-desktop@2x.jpg"),
-        linear-gradient(to right, @color-white 0%, @color-white calc(~"50% + 40px"), @color-green calc(~"50% + 40px"), @color-green 100%);
-      background-size: 552px 499px, 680px 696px, 100%;
-    }
+  @media (min-width: @tablet) {
+    padding-left: 87px;
   }
 
-  .catmeal__container {
-    .container-desktop();
-  }
-
-  .catmeal__wrapper {
+  @media (min-width: @desktop) {
     padding-left: 81px;
     padding-top: 223px;
   }
+}
 
-  .catmeal__slogan {
-    margin-bottom: 52px;
+.catmeal__btn {
+
+  @media (min-width: @tablet) {
+    margin-left: 3px;
   }
 
-  .catmeal__btn {
+  @media (min-width: @desktop) {
     margin-left: 0;
+  }
+}
+
+.catmeal__pic {
+
+  @media (min-width: @tablet) {
+    display: none;
   }
 }

@@ -47,6 +47,7 @@
   }
 
   .filter__input:focus {
+    padding: 12px 12px 11px 13px;
     border: 2px solid @color-black;
     outline: none;
   }
@@ -378,9 +379,18 @@
     border: 1px solid rgb(230, 230, 230);
   }
 
+  .filter__input:focus {
+    padding: 13px 19px 12px 19px;
+  }
+
   .filter__input--email,
   .filter__input--tel {
     padding: 15px 20px 13px 20px;
+  }
+
+   .filter__input--email:focus,
+  .filter__input--tel:focus {
+    padding: 14px 19px 12px 19px;
   }
 
   .filter__section-pers {
@@ -712,6 +722,11 @@
     padding: 15px 20px 11px 20px;
   }
 
+  .filter__input--email:focus,
+  .filter__input--tel:focus {
+    padding: 14px 19px 10px 19px;
+  }
+
   .filter__section-pers {
     .ident-reset();
   }
@@ -820,6 +835,10 @@
     min-height: 174px;
     padding-left: 17px;
     resize: none;
+  }
+
+  .filter__section-comment textarea:focus {
+    padding-left: 16px;
   }
 
   .filter__section-extra {

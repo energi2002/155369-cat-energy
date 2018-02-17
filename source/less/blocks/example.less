@@ -91,7 +91,12 @@
     width: 100%;
     min-height: 1083px;
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, @color-gray 1px, @color-white 1px, @color-white 621px, rgba(255, 255, 255, 0) 621px), linear-gradient(to right, @color-gray 50%, rgb(234, 234, 234) 50%);
+    background-image:
+      linear-gradient(to bottom, @color-gray 1px, @color-white 1px, @color-white 621px, rgba(255, 255, 255, 0) 621px, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(to right, @color-gray 50%, rgb(234, 234, 234) 50%);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-position: 0 0, 0 0;
   }
 
   .example__container {
@@ -177,7 +182,12 @@
     width: 100%;
     min-height: 620px;
     margin: 0 auto;
-    background-image: linear-gradient(to bottom, @color-gray 1px, @color-white 1px, @color-white 205px, rgba(255, 255, 255, 0) 205px), linear-gradient(to right, @color-gray 0%, @color-gray calc(~"50% + 325px"), rgb(234, 234, 234) calc(~"50% + 325px"), rgb(234, 234, 234) 100%);
+    background-image:
+      linear-gradient(to bottom, @color-gray 1px, @color-white 1px, @color-white 205px, rgba(255, 255, 255, 0) 205px, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(to right, @color-gray 0%, @color-gray calc(~"50% + 325px"), rgb(234, 234, 234) calc(~"50% + 325px"), rgb(234, 234, 234) 100%);
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    background-position: 0 0, 0 0;
   }
 
   .example__container {
