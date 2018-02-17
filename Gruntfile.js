@@ -1,7 +1,7 @@
 module.exports = function(grunt) {
   require("load-grunt-tasks")(grunt);
 
- grunt.initConfig({
+  grunt.initConfig({
     less: {
       style: {
         files: {
@@ -53,25 +53,25 @@ module.exports = function(grunt) {
     },
 
     csso: {
-       style: {
-          options: {
-             report: "gzip"
+      style: {
+        options: {
+          report: "gzip"
           },
           files: {
             "build/css/style.min.css": ["build/css/style.css"]
-         }
-       }
-     },
+          }
+      }
+    },
 
-   imagemin: {
-     images: {
-       options: {
-         optimizationLevel: 3,
-         progressive: true
-       },
-       files: [{
-         expand: true,
-         src: ["source/img/**/*.{png,jpg,svg}"]
+    imagemin: {
+      images: {
+        options: {
+          optimizationLevel: 3,
+          progressive: true
+        },
+        files: [{
+          expand: true,
+          src: ["source/img/**/*.{png,jpg,svg}"]
        }]
      }
    },
@@ -88,23 +88,23 @@ module.exports = function(grunt) {
       }
     },
 
-   svgstore: {
+    svgstore: {
       options: {
         includeTitleElement: false
-     },
-     sprite: {
+      },
+      sprite: {
         files: {
           "build/img/sprite.svg": ["source/img/icon-*.svg"]
         }
       }
     },
 
-   posthtml: {
-     options: {
-       use: [
-         require("posthtml-include")()
-       ]
-     },
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
       html: {
         files: [{
           expand: true,
@@ -120,20 +120,20 @@ module.exports = function(grunt) {
          expand: true,
          cwd: "source",
          src: [
-           "fonts/**/*.{woff,woff2}",
-           "img/**",
-           "js/**",
-           "*.html"
-         ],
-         dest: "build"
-       }]
-     }
-   },
+            "fonts/**/*.{woff,woff2}",
+            "img/**",
+            "js/**",
+            "*.html"
+          ],
+          dest: "build"
+        }]
+      }
+    },
 
-   clean: {
-     build: ["build"]
-   }
- });
+    clean: {
+      build: ["build"]
+    }
+  });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
 
