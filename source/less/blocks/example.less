@@ -91,8 +91,10 @@
     width: 100%;
     min-height: 1083px;
     margin: 0 auto;
+    border-top: 1px solid @color-gray;
+
     background-image:
-      linear-gradient(to bottom, @color-gray 1px, @color-white 1px, @color-white 621px, rgba(255, 255, 255, 0) 621px, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(to bottom, @color-white 0%, @color-white 621px, rgba(255, 255, 255, 0) 621px, rgba(255, 255, 255, 0) 100%),
       linear-gradient(to right, @color-gray 50%, rgb(234, 234, 234) 50%);
     background-repeat: no-repeat;
     background-size: 100%, 100%;
@@ -105,7 +107,7 @@
 
   .example__title {
     .ident-reset();
-    padding-top: 48px;
+    padding-top: 47px;
     margin-bottom: 60px;
     .font-title-tablet();
   }
@@ -182,9 +184,11 @@
     width: 100%;
     min-height: 620px;
     margin: 0 auto;
+    border-top: none;
+
     background-image:
-      linear-gradient(rgb(255, 255, 255) 205px, transparent 205px),
-      linear-gradient(to right, rgb(242, 242, 242) 50%, rgb(234, 234, 234) 50%);
+      linear-gradient(to bottom, @color-white 0%, @color-white 205px, rgba(255, 255, 255, 0) 205px, rgba(255, 255, 255, 0) 100%),
+      linear-gradient(to right, @color-gray 0%, @color-gray calc(~"50% + 325px"), rgb(234, 234, 234) calc(~"50% + 325px"), rgb(234, 234, 234) 100%);
     background-repeat: no-repeat;
     background-size: 100%, 100%;
     background-position: 0 0, 0 0;
@@ -195,12 +199,6 @@
     justify-content: flex-start;
     flex-direction: row;
     .container-desktop();
-    background-image:
-      linear-gradient(rgb(255, 255, 255) 205px, transparent 205px),
-      linear-gradient(to right, rgb(242, 242, 242) 975px, rgb(234, 234, 234) 975px);
-    background-repeat: no-repeat;
-    background-size: 100%, 100%;
-    background-position: 0 0, 0 0;
   }
 
   .example__wrapper {
