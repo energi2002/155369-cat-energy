@@ -69,15 +69,15 @@
               <div class="filter__container-radio">
                   <div class="page-content__container-inner">
                     <div class="filter__section-radio-form">
-                      <input class="filter__input filter__input--radio" type="radio" id="slim" name="programms" value="slim" checked>
+                      <input class="filter__input filter__input--radio visually-hidden" type="radio" id="slim" name="programms" value="slim" checked>
                       <label class="filter__label filter__label--radio" for="slim">Похудение</label>
                     </div>
                     <div class="filter__section-radio-form">
-                      <input class="filter__input filter__input--radio" type="radio" id="power" name="programms" value="power">
+                      <input class="filter__input filter__input--radio visually-hidden" type="radio" id="power" name="programms" value="power">
                       <label class="filter__label filter__label--radio" for="power">Набор массы</label>
                     </div>
                     <div class="filter__section-radio-form">
-                      <input class="filter__input filter__input--radio" type="radio" id="advice" name="programms" value="advice">
+                      <input class="filter__input filter__input--radio visually-hidden" type="radio" id="advice" name="programms" value="advice">
                       <label class="filter__label filter__label--radio" for="advice">Не знаю (нужен ваш совет)</label>
                     </div>
                 </div>
@@ -89,7 +89,7 @@
               <h2 class="filter__title">Контактные данные (владельца кота) </h2>
               <div class="filter__section-wrap-desk">
                 <div class="filter__section-contact-form">
-                  <label class="filter__label filter__label--email" for="name">E-mail:*</label>
+                  <label class="filter__label filter__label--email" for="email">E-mail:*</label>
                   <input class="filter__input filter__input--email" type="email" id="email" name="email" placeholder="kuklachev@gmail.com">
                 </div>
                 <div class="filter__section-contact-form">
@@ -112,19 +112,19 @@
             <h2 class="filter__title">Дополнительно</h2>
               <div class="filter__section-wrap-tablet">
                 <div class="filter__section-extra-form">
-                  <input class="filter__input filter__input--checkbox" type="checkbox" id="sweetener" name="sweetener" checked>
+                  <input class="filter__input filter__input--checkbox visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
                   <label class="filter__label filter__label--checkbox" for="sweetener">Сахарозаменитель</label>
                 </div>
                 <div class="filter__section-extra-form">
-                  <input class="filter__input filter__input--checkbox" type="checkbox" id="water" name="water" >
+                  <input class="filter__input filter__input--checkbox visually-hidden" type="checkbox" id="water" name="water" >
                   <label class="filter__label filter__label--checkbox" for="water">Питьевая вода</label>
                 </div>
                 <div class="filter__section-extra-form">
-                  <input class="filter__input filter__input--checkbox" type="checkbox" id="milk" name="milk">
+                  <input class="filter__input filter__input--checkbox visually-hidden" type="checkbox" id="milk" name="milk">
                   <label class="filter__label filter__label--checkbox" for="milk">Молоко</label>
                 </div>
                 <div class="filter__section-extra-form">
-                  <input class="filter__input filter__input--checkbox" type="checkbox" id="vitamins" name="vitamins">
+                  <input class="filter__input filter__input--checkbox visually-hidden" type="checkbox" id="vitamins" name="vitamins">
                   <label class="filter__label filter__label--checkbox" for="vitamins">Витамины</label>
                 </div>
               </div>
@@ -147,7 +147,9 @@
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5991043651638!2d30.32089461602683!3d59.93879418187617!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1516650808995" width="320" height="361" style="border:0" allowfullscreen></iframe>
       </div>
       <div class="page-footer__container-bottom">
-        <img class="logo-footer" src="img/logo-footer.svg" width="128" height="24" alt="Логотип компании">
+        <a class="logo-footer" href="index.html">
+          <img class="logo-footer-image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип компании">
+        </a>
         <div class="page-footer__social social">
           <ul class="social__list">
             <li class="social__item">

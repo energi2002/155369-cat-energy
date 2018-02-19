@@ -257,11 +257,6 @@
     }
   }
 
-  .filter__input--radio,
-  .filter__input--checkbox {
-    display: none;
-  }
-
   .filter__section-radio label {
     position: relative;
   }
@@ -301,6 +296,10 @@
     color: rgba(34, 34, 34, 0.3);
   }
 
+  .filter__section-radio input[type="radio"]:focus + label::before {
+    outline: 1px dotted rgb(0, 0, 0);
+  }
+
   .filter__section-extra label {
     position: relative;
   }
@@ -338,6 +337,10 @@
 
   .filter__section-extra input[type="checkbox"]:disabled + label {
     color: rgba(34, 34, 34, 0.3);
+  }
+
+  .filter__section-extra input[type="checkbox"]:focus + label::before {
+    outline: 1px dotted rgb(0, 0, 0);
   }
 
   .filter__input::-webkit-input-placeholder {
